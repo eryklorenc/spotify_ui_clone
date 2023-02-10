@@ -18,7 +18,7 @@ class AlbumCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>  AlbumView(image: image,),
+            builder: (context) =>  AlbumView(image: image, label: label),
           ),
         );
       },

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class AlbumView extends StatefulWidget {
   final ImageProvider image;
+  final String label;
 
-  const AlbumView({super.key, required this.image});
+  const AlbumView({super.key, required this.image, required this.label});
 
   @override
   State<AlbumView> createState() => _AlbumViewState();
@@ -149,6 +150,7 @@ class _AlbumViewState extends State<AlbumView> {
             ),
             child: SafeArea(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   IconButton(
                       onPressed: () {
@@ -156,13 +158,13 @@ class _AlbumViewState extends State<AlbumView> {
                       },
                       icon: const Icon(
                         Icons.arrow_left,
-                        size: 30,
+                        size: 25,
                       )),
                   const SizedBox(
-                    width: 90,
+                    width: 60,
                   ),
                   Text(
-                    'Best Mode',
+                    widget.label,
                     style: Theme.of(context).textTheme.headlineSmall,
                   )
                 ],
