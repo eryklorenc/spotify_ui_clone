@@ -4,6 +4,7 @@ import 'package:spotify_ui_clone/views/album_view.dart';
 class AlbumCard extends StatelessWidget {
   final ImageProvider image;
   final String label;
+
   const AlbumCard({
     super.key,
     required this.image,
@@ -17,7 +18,7 @@ class AlbumCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const AlbumView(),
+            builder: (context) =>  AlbumView(image: image,),
           ),
         );
       },

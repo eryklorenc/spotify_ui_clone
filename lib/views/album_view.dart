@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AlbumView extends StatefulWidget {
-  const AlbumView({super.key});
+  final ImageProvider image;
+
+  const AlbumView({super.key, required this.image});
 
   @override
   State<AlbumView> createState() => _AlbumViewState();
@@ -54,7 +56,7 @@ class _AlbumViewState extends State<AlbumView> {
                               )
                             ]),
                             child: Image(
-                              image: const AssetImage('assets/album4.jpg'),
+                              image: widget.image,
                               width: MediaQuery.of(context).size.width - 150,
                               height: MediaQuery.of(context).size.width - 150,
                               fit: BoxFit.cover,
@@ -148,12 +150,19 @@ class _AlbumViewState extends State<AlbumView> {
             child: SafeArea(
               child: Row(
                 children: [
-                  const Icon(Icons.arrow_back),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(
+                        Icons.arrow_left,
+                        size: 30,
+                      )),
                   const SizedBox(
                     width: 90,
                   ),
                   Text(
-                    'The Search',
+                    'Best Mode',
                     style: Theme.of(context).textTheme.headlineSmall,
                   )
                 ],
