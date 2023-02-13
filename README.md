@@ -1,16 +1,16 @@
-# spotify_ui_clone
+Spotify UI with Flutter
 
-A new Flutter project.
+![Zrzut ekranu (38)](https://user-images.githubusercontent.com/119433777/218543491-96d1d58d-16bf-4991-b4ce-af00547fae03.png)
 
-## Getting Started
+![Zrzut ekranu (41)](https://user-images.githubusercontent.com/119433777/218543538-c7510ca5-9d75-43c8-8249-1859672810b3.png)
 
-This project is a starting point for a Flutter application.
+![Zrzut ekranu (40)](https://user-images.githubusercontent.com/119433777/218543580-deb28002-6d23-4a84-a154-e3641484da02.png)
 
-A few resources to get you started if this is your first Flutter project:
+![Zrzut ekranu (39)](https://user-images.githubusercontent.com/119433777/218543611-7664e627-9461-40d2-b33f-29c99b1b8a8e.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Zrzut ekranu (37)](https://user-images.githubusercontent.com/119433777/218543630-944de1ab-1c9e-4cc6-ab6b-0e1f242b76bd.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+
