@@ -75,8 +75,8 @@ class _AlbumViewState extends State<AlbumView> {
                                 const SizedBox(
                                   height: 8,
                                 ),
-                                Row(
-                                  children: const [
+                                const Row(
+                                  children:  [
                                     Image(
                                       image: AssetImage('assets/logo.png'),
                                       width: 52,
@@ -98,8 +98,8 @@ class _AlbumViewState extends State<AlbumView> {
                                 Stack(
                                   clipBehavior: Clip.none,
                                   children: [
-                                    Row(
-                                      children: const [
+                                    const Row(
+                                      children:  [
                                         Icon(Icons.favorite),
                                         SizedBox(
                                           width: 14,

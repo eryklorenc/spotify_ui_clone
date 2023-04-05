@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/widgets/artist_card.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({super.key});
@@ -25,8 +26,8 @@ class _LibraryViewState extends State<LibraryView> {
                 children: [
                   Text('Your favorite Music',
                       style: Theme.of(context).textTheme.headlineSmall),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Icon(Icons.search),
                       SizedBox(
                         width: 20,
@@ -41,10 +42,10 @@ class _LibraryViewState extends State<LibraryView> {
           const SizedBox(
             height: 50,
           ),
-          Padding(
-            padding: const EdgeInsets.all(22),
+          const Padding(
+            padding: EdgeInsets.all(22),
             child: Column(
-              children: const [
+              children: [
                 ArtistCard(
                   artist: 'Drake',
                   image: AssetImage('assets/album1.jpg'),
@@ -79,45 +80,4 @@ class _LibraryViewState extends State<LibraryView> {
   }
 }
 
-class ArtistCard extends StatelessWidget {
-  final AssetImage image;
-  final String artist;
-  const ArtistCard({
-    super.key,
-    required this.image,
-    required this.artist,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        CircleAvatar(
-          backgroundImage: image,
-          radius: 45,
-        ),
-        const Padding(padding: EdgeInsets.all(16)),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              artist,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 28,
-                  fontWeight: FontWeight.w800),
-            ),
-            const Text(
-              'Artist',
-              style: TextStyle(
-                  color: Colors.white24,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w300),
-            )
-          ],
-        ),
-      ],
-    );
-  }
-}

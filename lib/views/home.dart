@@ -59,8 +59,8 @@ class _HomeView extends State<HomeView> {
                         children: [
                           Text('Recently Played',
                               style: Theme.of(context).textTheme.headlineSmall),
-                          Row(
-                            children: const [
+                         const  Row(
+                            children:  [
                               Icon(Icons.history),
                               SizedBox(
                                 width: 20,
@@ -71,12 +71,12 @@ class _HomeView extends State<HomeView> {
                         ],
                       ),
                     ),
-                    SingleChildScrollView(
+                  const  SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      physics: const BouncingScrollPhysics(),
-                      padding: const EdgeInsets.all(20),
+                      physics:  BouncingScrollPhysics(),
+                      padding:  EdgeInsets.all(20),
                       child: Row(
-                        children: const [
+                        children:  [
                           AlbumCard(
                             label: 'Best Mode',
                             image: AssetImage('assets/album3.jpg'),
@@ -127,8 +127,8 @@ class _HomeView extends State<HomeView> {
                           const SizedBox(
                             height: 14,
                           ),
-                          Row(
-                            children: const [
+                        const  Row(
+                            children:  [
                               RowAlbumCard(
                                 label: 'TOP 50 - Global',
                                 image: AssetImage('assets/top50.jpg'),
@@ -145,8 +145,8 @@ class _HomeView extends State<HomeView> {
                           const SizedBox(
                             height: 14,
                           ),
-                          Row(
-                            children: const [
+                      const    Row(
+                            children:  [
                               RowAlbumCard(
                                 label: 'TOP 50 - USA',
                                 image: AssetImage('assets/album13.jpg'),
@@ -163,8 +163,8 @@ class _HomeView extends State<HomeView> {
                           const SizedBox(
                             height: 14,
                           ),
-                          Row(
-                            children: const [
+                        const  Row(
+                            children:  [
                               RowAlbumCard(
                                 label: 'Best of NF',
                                 image: AssetImage('assets/album9.jpg'),
@@ -191,12 +191,12 @@ class _HomeView extends State<HomeView> {
                             style: Theme.of(context).textTheme.headlineSmall,
                           ),
                         ),
-                        SingleChildScrollView(
+                      const  SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
-                          physics: const BouncingScrollPhysics(),
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          physics:  BouncingScrollPhysics(),
+                          padding:  EdgeInsets.symmetric(horizontal: 20),
                           child: Row(
-                            children: const [
+                            children:  [
                               SongCard(
                                 image: AssetImage('assets/album12.jpg'),
                               ),
@@ -251,12 +251,12 @@ class _HomeView extends State<HomeView> {
                             style: Theme.of(context).textTheme.headlineSmall,
                           ),
                         ),
-                        SingleChildScrollView(
+                        const SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
-                          physics: const BouncingScrollPhysics(),
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          physics:  BouncingScrollPhysics(),
+                          padding:  EdgeInsets.symmetric(horizontal: 20),
                           child: Row(
-                            children: const [
+                            children:  [
                               SongCard(
                                 image: AssetImage('assets/album13.jpg'),
                               ),
