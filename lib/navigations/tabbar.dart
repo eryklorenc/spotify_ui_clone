@@ -13,6 +13,7 @@ class Tabbar extends StatefulWidget {
 
 class TabbarState extends State<Tabbar> {
   var currentIndex = 0;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,8 @@ class TabbarState extends State<Tabbar> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.library_music_outlined),
                 label: 'Your Library'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person), label: 'Profile'),
           ]),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {

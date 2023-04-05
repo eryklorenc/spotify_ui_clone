@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatefulWidget {
@@ -106,7 +107,22 @@ class _ProfileViewState extends State<ProfileView> {
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  FirebaseAuth.instance.signOut();
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(200),
+                  ),
+                ),
+                child: const Text(
+                  'Sign out',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+              ),
             ],
           ),
         ),

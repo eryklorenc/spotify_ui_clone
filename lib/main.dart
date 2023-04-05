@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/navigations/tabbar.dart';
+import 'package:spotify_ui_clone/app/root_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
             selectedItemColor: Colors.white,
             unselectedItemColor: Colors.white38),
       ),
-      home: const Tabbar(),
+      home: const RootPage(),
     );
   }
 }
