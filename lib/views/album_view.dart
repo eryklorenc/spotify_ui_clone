@@ -76,13 +76,17 @@ class _AlbumViewState extends State<AlbumView> {
                                   height: 8,
                                 ),
                                 const Row(
-                                  children:  [
+                                  children: [
                                     Image(
-                                      image: AssetImage('assets/logo.png'),
+                                      image: AssetImage(
+                                        'assets/logo.png',
+                                      ),
                                       width: 52,
                                       height: 52,
                                     ),
-                                    Text('Spotify'),
+                                    Text(
+                                      'Spotify',
+                                    ),
                                   ],
                                 ),
                                 const SizedBox(
@@ -99,7 +103,7 @@ class _AlbumViewState extends State<AlbumView> {
                                   clipBehavior: Clip.none,
                                   children: [
                                     const Row(
-                                      children:  [
+                                      children: [
                                         Icon(Icons.favorite),
                                         SizedBox(
                                           width: 14,
@@ -142,35 +146,37 @@ class _AlbumViewState extends State<AlbumView> {
             ),
           ),
           Positioned(
-              child: SafeArea(
-                  child: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 10,
-            ),
             child: SafeArea(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.arrow_left,
-                        size: 25,
-                      )),
-                  const SizedBox(
-                    width: 60,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
+                child: SafeArea(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(
+                            Icons.arrow_left,
+                            size: 25,
+                          )),
+                      const SizedBox(
+                        width: 60,
+                      ),
+                      Text(
+                        widget.label,
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                    ],
                   ),
-                  Text(
-                    widget.label,
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  )
-                ],
+                ),
               ),
             ),
-          )))
+          ),
         ],
       ),
     );

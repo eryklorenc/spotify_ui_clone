@@ -99,7 +99,6 @@ class _LoginPageState extends State<LoginPage> {
                 child: ElevatedButton(
                   onPressed: () async {
                     if (isCreatingAccount == true) {
-                      //rejestracja
                       try {
                         await FirebaseAuth.instance
                             .createUserWithEmailAndPassword(
@@ -112,7 +111,6 @@ class _LoginPageState extends State<LoginPage> {
                         });
                       }
                     } else {
-                      //logowanie
                       try {
                         await FirebaseAuth.instance.signInWithEmailAndPassword(
                           email: emailController.text,

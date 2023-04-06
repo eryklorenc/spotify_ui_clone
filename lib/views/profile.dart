@@ -69,24 +69,25 @@ class _ProfileViewState extends State<ProfileView> {
                     ),
                   ),
                   Expanded(
-                      child: Column(
-                    children: [
-                      Text(
-                        '2.3K',
-                        style: TextStyle(color: Colors.white, fontSize: 35),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        'Follow',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 25,
-                            fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  ))
+                    child: Column(
+                      children: [
+                        Text(
+                          '2.3K',
+                          style: TextStyle(color: Colors.white, fontSize: 35),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Follow',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 25,
+                              fontWeight: FontWeight.w300),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(
