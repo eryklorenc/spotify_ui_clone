@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/app/root_page.dart';
+import 'package:spotify_ui_clone/app/auth_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 

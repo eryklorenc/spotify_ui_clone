@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:spotify_ui_clone/app/cubit/root_cubit.dart';
+import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -112,7 +112,7 @@ class _ProfileViewState extends State<ProfileView> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  context.read<RootCubit>().signOut();
+                  context.read<AuthCubit>().signOut();
                   
                 },
                 style: ElevatedButton.styleFrom(
