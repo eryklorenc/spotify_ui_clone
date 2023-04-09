@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/views/album_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/models/item_model_album_view.dart';
+import 'package:spotify_ui_clone/views/home/album_view/album_view.dart';
+import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
 
 class AlbumCard extends StatelessWidget {
   final ImageProvider image;
@@ -9,34 +12,47 @@ class AlbumCard extends StatelessWidget {
     super.key,
     required this.image,
     required this.label,
+    required this.itemModelAlbumView,
   });
+
+  final ItemModelAlbumView itemModelAlbumView;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) =>  AlbumView(image: image, label: label),
+    return BlocBuilder<AlbumViewCubit, AlbumViewState>(
+      builder: (context, state) {
+        return GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AlbumView(
+                  itemModelAlbumView: itemModelAlbumView,
+                  image: image,
+                  label: label,
+                ),
+              ),
+            );
+          },
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image(
+                image: image,
+                width: 120,
+                height: 120,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                label,
+              ),
+            ],
           ),
         );
       },
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image(
-            image: image,
-            width: 120,
-            height: 120,
-            fit: BoxFit.cover,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(label),
-        ],
-      ),
     );
   }
 }

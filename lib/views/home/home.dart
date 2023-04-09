@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/app/core/enums.dart';
+import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
+import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/widgets/good_evening.dart';
 import 'package:spotify_ui_clone/widgets/recent_listening.dart';
 import 'package:spotify_ui_clone/widgets/recently_played_card.dart';
@@ -61,8 +65,8 @@ class _HomeView extends State<HomeView> {
                         children: [
                           Text('Recently Played',
                               style: Theme.of(context).textTheme.headlineSmall),
-                         const  Row(
-                            children:  [
+                          const Row(
+                            children: [
                               Icon(Icons.history),
                               SizedBox(
                                 width: 20,
@@ -73,7 +77,39 @@ class _HomeView extends State<HomeView> {
                         ],
                       ),
                     ),
-                 const RecentlyPlayedCard(),
+                    BlocProvider(
+                      create: (context) =>
+                          AlbumViewCubit(ItemsRepositoryAlbumView())
+                            ..getItemModelAlbumView(),
+                      child: BlocListener<AlbumViewCubit, AlbumViewState>(
+                        listener: (context, state) {
+                          if (state.status == Status.error) {
+                            final errorMessage =
+                                state.errorMessage ?? 'Unkown error';
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(errorMessage),
+                                backgroundColor: Colors.red,
+                              ),
+                            );
+                          }
+                        },
+                        child: BlocBuilder<AlbumViewCubit, AlbumViewState>(
+                          builder: (context, state) {
+                            final itemModelAlbumView = state.model;
+
+                            return Column(
+                              children: [
+                                if (itemModelAlbumView != null)
+                                  RecentlyPlayedCard(
+                                    itemModelAlbumView: itemModelAlbumView,
+                                  ),
+                              ],
+                            );
+                          },
+                        ),
+                      ),
+                    ),
                     const SizedBox(
                       height: 22,
                     ),
@@ -96,12 +132,3 @@ class _HomeView extends State<HomeView> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
