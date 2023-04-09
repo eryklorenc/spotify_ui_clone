@@ -82,33 +82,31 @@ class _HomeView extends State<HomeView> {
                       create: (context) => AlbumViewCubit(
                           ItemsRepositoryAlbumView(AlbumViewRemoteDataSource()))
                         ..getItemModelAlbumView(),
-                      child: BlocListener<AlbumViewCubit, AlbumViewState>(
+                      child: BlocConsumer<AlbumViewCubit, AlbumViewState>(
                         listener: (context, state) {
-                          if (state.status == Status.error) {
-                            final errorMessage =
-                                state.errorMessage ?? 'Unkown error';
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(errorMessage),
-                                backgroundColor: Colors.red,
-                              ),
-                            );
-                          }
-                        },
-                        child: BlocBuilder<AlbumViewCubit, AlbumViewState>(
-                          builder: (context, state) {
-                            final itemModelAlbumView = state.model;
+                        if (state.status == Status.error) {
+                          final errorMessage =
+                              state.errorMessage ?? 'Unkown error';
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(errorMessage),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        }
+                      },
+                        builder: (context, state) {
+                          final itemModelAlbumView = state.model;
 
-                            return Column(
-                              children: [
-                                if (itemModelAlbumView != null)
-                                  RecentlyPlayedCard(
-                                    itemModelAlbumView: itemModelAlbumView,
-                                  ),
-                              ],
-                            );
-                          },
-                        ),
+                          return Column(
+                            children: [
+                              if (itemModelAlbumView != null)
+                                RecentlyPlayedCard(
+                                  itemModelAlbumView: itemModelAlbumView,
+                                ),
+                            ],
+                          );
+                        },
                       ),
                     ),
                     const SizedBox(
