@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
+import 'package:spotify_ui_clone/data/remote_data_sources/album_view_remote_data_source.dart';
 import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
 import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/widgets/good_evening.dart';
@@ -78,9 +79,9 @@ class _HomeView extends State<HomeView> {
                       ),
                     ),
                     BlocProvider(
-                      create: (context) =>
-                          AlbumViewCubit(ItemsRepositoryAlbumView())
-                            ..getItemModelAlbumView(),
+                      create: (context) => AlbumViewCubit(
+                          ItemsRepositoryAlbumView(AlbumViewRemoteDataSource()))
+                        ..getItemModelAlbumView(),
                       child: BlocListener<AlbumViewCubit, AlbumViewState>(
                         listener: (context, state) {
                           if (state.status == Status.error) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/data/remote_data_sources/album_view_remote_data_source.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
 import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
 import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
@@ -19,7 +20,7 @@ class AlbumView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AlbumViewCubit(ItemsRepositoryAlbumView())..getItemModelAlbumView(),
+      create: (context) => AlbumViewCubit(ItemsRepositoryAlbumView(AlbumViewRemoteDataSource()))..getItemModelAlbumView(),
       child: BlocBuilder<AlbumViewCubit, AlbumViewState>(
         builder: (context, state) {
           return Scaffold(
