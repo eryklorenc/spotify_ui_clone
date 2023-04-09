@@ -8,16 +8,12 @@ class ItemsRepositoryAlbumView {
   final AlbumViewRemoteDataSource _albumViewRemoteDataSource;
 
   Future<ItemModelAlbumView?> getItemModelAlbumView() async {
-    final responseData = await _albumViewRemoteDataSource.getDataAlbumView();
+    final json = await _albumViewRemoteDataSource.getDataAlbumView();
 
-    if (responseData == null) {
+    if (json == null) {
       return null;
     }
 
-    final content = responseData['body'] as String;
-
-    return ItemModelAlbumView(
-      content: content,
-    );
+    return ItemModelAlbumView.fromJson(json);
   }
 }
