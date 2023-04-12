@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
@@ -103,7 +104,7 @@ class _ProfileViewState extends State<ProfileView> {
                 padding: const EdgeInsets.all(20),
                 child: BlocProvider(
                   create: (context) => EditProfileCubit(
-                      ItemsRepositoryEditProfile(EditProfileRemoteDataSource()))
+                      ItemsRepositoryEditProfile(EditProfileRemoteRetrofitDataSource(Dio())))
                     ..getItemModelEditProfile(),
                   child: BlocConsumer<EditProfileCubit, EditProfileState>(
                     listener: (context, state) {

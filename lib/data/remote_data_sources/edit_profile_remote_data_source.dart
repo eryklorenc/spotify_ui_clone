@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
+import 'package:retrofit/retrofit.dart';
+import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
 
-class EditProfileRemoteDataSource {
-  Future<Map<String, dynamic>?> getDataEditProfile() async {
-    try {
-      final response = await Dio().get<Map<String, dynamic>>(
-          'https://jsonplaceholder.typicode.com/posts/1');
-      return response.data;
-    } on DioError catch (error) {
-      throw Exception(
-        error.response?.data['error']['message'] ?? 'Unknown error',
-      );
-    }
-  }
+part 'edit_profile_remote_data_source.g.dart';
+
+@RestApi(baseUrl: "https://jsonplaceholder.typicode.com")
+abstract class EditProfileRemoteRetrofitDataSource {
+  factory EditProfileRemoteRetrofitDataSource(Dio dio, {String baseUrl}) = _EditProfileRemoteRetrofitDataSource;
+
+  @GET("/posts/1")
+  Future<ItemModelEditProfile> getDataEditProfile();
 }
+
+

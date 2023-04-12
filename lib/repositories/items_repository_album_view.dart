@@ -5,15 +5,10 @@ class ItemsRepositoryAlbumView {
   ItemsRepositoryAlbumView(
     this._albumViewRemoteDataSource,
   );
-  final AlbumViewRemoteDataSource _albumViewRemoteDataSource;
+  final AlbumViewRemoteRetrofitDataSource _albumViewRemoteDataSource;
 
   Future<ItemModelAlbumView?> getItemModelAlbumView() async {
-    final json = await _albumViewRemoteDataSource.getDataAlbumView();
+    return _albumViewRemoteDataSource.getDataAlbumView();
 
-    if (json == null) {
-      return null;
-    }
-
-    return ItemModelAlbumView.fromJson(json);
   }
 }

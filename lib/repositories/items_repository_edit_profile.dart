@@ -5,15 +5,10 @@ class ItemsRepositoryEditProfile {
   ItemsRepositoryEditProfile(
     this._editProfileRemoteDataSource,
   );
-  final EditProfileRemoteDataSource _editProfileRemoteDataSource;
+  final EditProfileRemoteRetrofitDataSource _editProfileRemoteDataSource;
 
   Future<ItemModelEditProfile?> getItemModelEditProfile() async {
-    final json = await _editProfileRemoteDataSource.getDataEditProfile();
+   return _editProfileRemoteDataSource.getDataEditProfile();
 
-    if (json == null) {
-      return null;
-    }
-
-    return ItemModelEditProfile.fromJson(json);
   }
 }

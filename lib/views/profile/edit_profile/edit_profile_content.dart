@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/data/remote_data_sources/edit_profile_remote_data_source.dart';
@@ -14,7 +15,7 @@ class EditProfileContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => EditProfileCubit(
-          ItemsRepositoryEditProfile(EditProfileRemoteDataSource()))
+          ItemsRepositoryEditProfile(EditProfileRemoteRetrofitDataSource(Dio())))
         ..getItemModelEditProfile(),
       child: BlocBuilder<EditProfileCubit, EditProfileState>(
         builder: (context, state) {

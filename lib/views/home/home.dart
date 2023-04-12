@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
@@ -80,7 +81,7 @@ class _HomeView extends State<HomeView> {
                     ),
                     BlocProvider(
                       create: (context) => AlbumViewCubit(
-                          ItemsRepositoryAlbumView(AlbumViewRemoteDataSource()))
+                          ItemsRepositoryAlbumView(AlbumViewRemoteRetrofitDataSource(Dio())))
                         ..getItemModelAlbumView(),
                       child: BlocConsumer<AlbumViewCubit, AlbumViewState>(
                         listener: (context, state) {
