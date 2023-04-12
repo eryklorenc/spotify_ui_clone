@@ -1,9 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
 import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
 
 part 'album_view_state.dart';
+
+part 'album_view_cubit.freezed.dart';
 
 class AlbumViewCubit extends Cubit<AlbumViewState> {
   AlbumViewCubit(

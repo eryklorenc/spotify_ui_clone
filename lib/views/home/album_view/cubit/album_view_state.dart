@@ -1,12 +1,11 @@
 part of 'album_view_cubit.dart';
 
-class AlbumViewState {
-  const AlbumViewState({
-    this.model,
-    this.status = Status.initial,
-    this.errorMessage,
-  });
-  final ItemModelAlbumView? model;
-  final Status status;
-  final String? errorMessage;
+
+@freezed
+class AlbumViewState  with _$AlbumViewState {
+  const factory AlbumViewState({
+    ItemModelAlbumView? model,
+    @Default(Status.initial) Status status,
+    String? errorMessage,
+  }) = _MostPopularState;
 }
