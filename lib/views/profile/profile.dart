@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
+import 'package:spotify_ui_clone/views/profile/edit_profile/edit_profile_content.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -97,7 +98,13 @@ class _ProfileViewState extends State<ProfileView> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const EditProfileContent(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
@@ -113,7 +120,6 @@ class _ProfileViewState extends State<ProfileView> {
               ElevatedButton(
                 onPressed: () {
                   context.read<AuthCubit>().signOut();
-                  
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
