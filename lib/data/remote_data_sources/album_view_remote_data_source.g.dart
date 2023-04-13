@@ -13,9 +13,7 @@ class _AlbumViewRemoteRetrofitDataSource
   _AlbumViewRemoteRetrofitDataSource(
     this._dio, {
     this.baseUrl,
-  }) {
-    baseUrl ??= 'https://jsonplaceholder.typicode.com';
-  }
+  });
 
   final Dio _dio;
 

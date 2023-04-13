@@ -1,10 +1,8 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
+import 'package:spotify_ui_clone/app/core/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
-import 'package:spotify_ui_clone/data/remote_data_sources/edit_profile_remote_data_source.dart';
-import 'package:spotify_ui_clone/repositories/items_repository_edit_profile.dart';
 import 'package:spotify_ui_clone/views/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/views/profile/edit_profile/edit_profile_content.dart';
 
@@ -103,8 +101,7 @@ class _ProfileViewState extends State<ProfileView> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: BlocProvider(
-                  create: (context) => EditProfileCubit(
-                      ItemsRepositoryEditProfile(EditProfileRemoteRetrofitDataSource(Dio())))
+                  create: (context) => getIt<EditProfileCubit>()
                     ..getItemModelEditProfile(),
                   child: BlocConsumer<EditProfileCubit, EditProfileState>(
                     listener: (context, state) {

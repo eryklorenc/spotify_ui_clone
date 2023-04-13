@@ -1,13 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
 import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
-import 'package:spotify_ui_clone/repositories/items_repository_edit_profile.dart';
+import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
 
 part 'edit_profile_state.dart';
 
 part 'edit_profile_cubit.freezed.dart';
 
+@injectable
 class EditProfileCubit extends Cubit<EditProfileState> {
   EditProfileCubit(
     this._itemsRepositoryEditProfile,
@@ -15,7 +17,7 @@ class EditProfileCubit extends Cubit<EditProfileState> {
           const EditProfileState(),
         );
 
-  final ItemsRepositoryEditProfile _itemsRepositoryEditProfile;
+  final ItemsRepository _itemsRepositoryEditProfile;
 
   Future<void> getItemModelEditProfile() async {
     emit(const EditProfileState(

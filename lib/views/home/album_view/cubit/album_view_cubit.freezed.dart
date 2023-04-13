@@ -83,11 +83,11 @@ class _$AlbumViewStateCopyWithImpl<$Res, $Val extends AlbumViewState>
 }
 
 /// @nodoc
-abstract class _$$_MostPopularStateCopyWith<$Res>
+abstract class _$$_AlbumViewStateCopyWith<$Res>
     implements $AlbumViewStateCopyWith<$Res> {
-  factory _$$_MostPopularStateCopyWith(
-          _$_MostPopularState value, $Res Function(_$_MostPopularState) then) =
-      __$$_MostPopularStateCopyWithImpl<$Res>;
+  factory _$$_AlbumViewStateCopyWith(
+          _$_AlbumViewState value, $Res Function(_$_AlbumViewState) then) =
+      __$$_AlbumViewStateCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ItemModelAlbumView? model, Status status, String? errorMessage});
@@ -97,11 +97,11 @@ abstract class _$$_MostPopularStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MostPopularStateCopyWithImpl<$Res>
-    extends _$AlbumViewStateCopyWithImpl<$Res, _$_MostPopularState>
-    implements _$$_MostPopularStateCopyWith<$Res> {
-  __$$_MostPopularStateCopyWithImpl(
-      _$_MostPopularState _value, $Res Function(_$_MostPopularState) _then)
+class __$$_AlbumViewStateCopyWithImpl<$Res>
+    extends _$AlbumViewStateCopyWithImpl<$Res, _$_AlbumViewState>
+    implements _$$_AlbumViewStateCopyWith<$Res> {
+  __$$_AlbumViewStateCopyWithImpl(
+      _$_AlbumViewState _value, $Res Function(_$_AlbumViewState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +111,7 @@ class __$$_MostPopularStateCopyWithImpl<$Res>
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_MostPopularState(
+    return _then(_$_AlbumViewState(
       model: freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -130,8 +130,8 @@ class __$$_MostPopularStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MostPopularState implements _MostPopularState {
-  const _$_MostPopularState(
+class _$_AlbumViewState implements _AlbumViewState {
+  const _$_AlbumViewState(
       {this.model, this.status = Status.initial, this.errorMessage});
 
   @override
@@ -151,7 +151,7 @@ class _$_MostPopularState implements _MostPopularState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MostPopularState &&
+            other is _$_AlbumViewState &&
             (identical(other.model, model) || other.model == model) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -164,15 +164,15 @@ class _$_MostPopularState implements _MostPopularState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MostPopularStateCopyWith<_$_MostPopularState> get copyWith =>
-      __$$_MostPopularStateCopyWithImpl<_$_MostPopularState>(this, _$identity);
+  _$$_AlbumViewStateCopyWith<_$_AlbumViewState> get copyWith =>
+      __$$_AlbumViewStateCopyWithImpl<_$_AlbumViewState>(this, _$identity);
 }
 
-abstract class _MostPopularState implements AlbumViewState {
-  const factory _MostPopularState(
+abstract class _AlbumViewState implements AlbumViewState {
+  const factory _AlbumViewState(
       {final ItemModelAlbumView? model,
       final Status status,
-      final String? errorMessage}) = _$_MostPopularState;
+      final String? errorMessage}) = _$_AlbumViewState;
 
   @override
   ItemModelAlbumView? get model;
@@ -182,6 +182,6 @@ abstract class _MostPopularState implements AlbumViewState {
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$_MostPopularStateCopyWith<_$_MostPopularState> get copyWith =>
+  _$$_AlbumViewStateCopyWith<_$_AlbumViewState> get copyWith =>
       throw _privateConstructorUsedError;
 }

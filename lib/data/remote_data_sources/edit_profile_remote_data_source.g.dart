@@ -13,9 +13,7 @@ class _EditProfileRemoteRetrofitDataSource
   _EditProfileRemoteRetrofitDataSource(
     this._dio, {
     this.baseUrl,
-  }) {
-    baseUrl ??= 'https://jsonplaceholder.typicode.com';
-  }
+  });
 
   final Dio _dio;
 
