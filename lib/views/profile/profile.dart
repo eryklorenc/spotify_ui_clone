@@ -31,7 +31,7 @@ class _ProfileViewState extends State<ProfileView> {
               const SizedBox(
                 height: 50,
               ),
-               Row(
+              Row(
                 children: [
                   Expanded(
                     child: Column(
@@ -101,8 +101,8 @@ class _ProfileViewState extends State<ProfileView> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: BlocProvider(
-                  create: (context) => getIt<EditProfileCubit>()
-                    ..getItemModelEditProfile(),
+                  create: (context) =>
+                      getIt<EditProfileCubit>()..getItemModelEditProfile(),
                   child: BlocConsumer<EditProfileCubit, EditProfileState>(
                     listener: (context, state) {
                       if (state.status == Status.error) {
@@ -134,6 +134,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 );
                               },
                               style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(140, 50),
                                 backgroundColor: Colors.green,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(200),
@@ -156,6 +157,7 @@ class _ProfileViewState extends State<ProfileView> {
                   context.read<AuthCubit>().signOut();
                 },
                 style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(140, 50),
                   backgroundColor: Colors.green,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(200),
