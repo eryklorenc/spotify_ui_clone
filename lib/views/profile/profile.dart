@@ -31,11 +31,11 @@ class _ProfileViewState extends State<ProfileView> {
               const SizedBox(
                 height: 50,
               ),
-              const Row(
+               Row(
                 children: [
                   Expanded(
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           '501',
                           style: TextStyle(color: Colors.white, fontSize: 35),
@@ -55,7 +55,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Expanded(
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           '5.1K',
                           style: TextStyle(color: Colors.white, fontSize: 35),
@@ -75,7 +75,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Expanded(
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           '2.3K',
                           style: TextStyle(color: Colors.white, fontSize: 35),

@@ -90,8 +90,8 @@ class AlbumView extends StatelessWidget {
                                       const SizedBox(
                                         height: 8,
                                       ),
-                                      const Row(
-                                        children: [
+                                       Row(
+                                        children: const [
                                           Image(
                                             image: AssetImage(
                                               'assets/logo.png',
@@ -119,8 +119,8 @@ class AlbumView extends StatelessWidget {
                                       Stack(
                                         clipBehavior: Clip.none,
                                         children: [
-                                          const Row(
-                                            children: [
+                                           Row(
+                                            children: const [
                                               Icon(Icons.favorite),
                                               SizedBox(
                                                 width: 14,

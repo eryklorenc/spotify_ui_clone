@@ -65,8 +65,8 @@ class _HomeView extends State<HomeView> {
                         children: [
                           Text('Recently Played',
                               style: Theme.of(context).textTheme.headlineSmall),
-                          const Row(
-                            children: [
+                           Row(
+                            children: const [
                               Icon(Icons.history),
                               SizedBox(
                                 width: 20,

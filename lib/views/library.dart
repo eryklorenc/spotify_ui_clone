@@ -26,8 +26,8 @@ class _LibraryViewState extends State<LibraryView> {
                 children: [
                   Text('Your favorite Music',
                       style: Theme.of(context).textTheme.headlineSmall),
-                  const Row(
-                    children: [
+                 Row(
+                    children: const [
                       Icon(Icons.search),
                       SizedBox(
                         width: 20,
@@ -42,10 +42,10 @@ class _LibraryViewState extends State<LibraryView> {
           const SizedBox(
             height: 50,
           ),
-          const Padding(
-            padding: EdgeInsets.all(22),
+           Padding(
+            padding: const EdgeInsets.all(22),
             child: Column(
-              children: [
+              children: const [
                 ArtistCard(
                   artist: 'Drake',
                   image: AssetImage('assets/album1.jpg'),

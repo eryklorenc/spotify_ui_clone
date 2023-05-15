@@ -48,8 +48,8 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Row(
-                    children: [
+                  Row(
+                    children: const [
                       Icon(
                         Icons.person,
                         color: Colors.green,
@@ -133,8 +133,8 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Icon(
                         Icons.lock,
                         color: Colors.green,

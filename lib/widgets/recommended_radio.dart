@@ -18,12 +18,12 @@ class RecommendedRadio extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
-        const SingleChildScrollView(
+       SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          physics:  BouncingScrollPhysics(),
-          padding:  EdgeInsets.symmetric(horizontal: 20),
+          physics:  const BouncingScrollPhysics(),
+          padding:  const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
-            children:  [
+            children:  const [
               SongCard(
                 image: AssetImage('assets/album13.jpg'),
               ),

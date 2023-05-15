@@ -20,8 +20,8 @@ class GoodEvening extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-        const  Row(
-            children:  [
+         Row(
+            children:  const [
               GoodAlbumCard(
                 label: 'TOP 50 - Global',
                 image: AssetImage('assets/top50.jpg'),
@@ -38,8 +38,8 @@ class GoodEvening extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-      const    Row(
-            children:  [
+       Row(
+            children:  const [
               GoodAlbumCard(
                 label: 'TOP 50 - USA',
                 image: AssetImage('assets/album13.jpg'),
@@ -56,8 +56,8 @@ class GoodEvening extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-        const  Row(
-            children:  [
+          Row(
+            children:  const [
               GoodAlbumCard(
                 label: 'Best of NF',
                 image: AssetImage('assets/album9.jpg'),
