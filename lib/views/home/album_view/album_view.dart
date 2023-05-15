@@ -19,8 +19,7 @@ class AlbumView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<AlbumViewCubit>(
-      )..getItemModelAlbumView(),
+      create: (context) => getIt<AlbumViewCubit>()..getItemModelAlbumView(),
       child: BlocBuilder<AlbumViewCubit, AlbumViewState>(
         builder: (context, state) {
           return Scaffold(
@@ -90,7 +89,7 @@ class AlbumView extends StatelessWidget {
                                       const SizedBox(
                                         height: 8,
                                       ),
-                                       Row(
+                                      Row(
                                         children: const [
                                           Image(
                                             image: AssetImage(
@@ -119,7 +118,7 @@ class AlbumView extends StatelessWidget {
                                       Stack(
                                         clipBehavior: Clip.none,
                                         children: [
-                                           Row(
+                                          Row(
                                             children: const [
                                               Icon(Icons.favorite),
                                               SizedBox(
@@ -162,36 +161,27 @@ class AlbumView extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
-                  child: SafeArea(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 10,
-                      ),
-                      child: SafeArea(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                icon: const Icon(
-                                  Icons.arrow_left,
-                                  size: 25,
-                                )),
-                            const SizedBox(
-                              width: 60,
-                            ),
-                            Text(
-                              label,
-                              style: Theme.of(context).textTheme.headlineSmall,
-                            ),
-                          ],
+                SafeArea(
+                  child: Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(
+                          Icons.keyboard_arrow_left,
+                          size: 40,
                         ),
                       ),
-                    ),
+                      const Spacer(),
+                      Text(
+                        label,
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                      const Spacer(
+                        flex: 2,
+                      ),
+                    ],
                   ),
                 ),
               ],
