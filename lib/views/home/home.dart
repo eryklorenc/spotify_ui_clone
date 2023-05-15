@@ -32,7 +32,7 @@ class _HomeView extends State<HomeView> {
                 colors: [
                   Colors.white.withOpacity(0.5),
                   Colors.white.withOpacity(0.1),
-                  Colors.black.withOpacity(0)
+                  Colors.black.withOpacity(0),
                 ],
               ),
             ),
@@ -46,7 +46,7 @@ class _HomeView extends State<HomeView> {
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.white.withOpacity(0),
-                    Colors.black.withOpacity(1)
+                    Colors.black.withOpacity(1),
                   ],
                 ),
               ),
@@ -65,7 +65,7 @@ class _HomeView extends State<HomeView> {
                         children: [
                           Text('Recently Played',
                               style: Theme.of(context).textTheme.headlineSmall),
-                           Row(
+                          Row(
                             children: const [
                               Icon(Icons.history),
                               SizedBox(
@@ -78,21 +78,21 @@ class _HomeView extends State<HomeView> {
                       ),
                     ),
                     BlocProvider(
-                      create: (context) => getIt<AlbumViewCubit>()
-                        ..getItemModelAlbumView(),
+                      create: (context) =>
+                          getIt<AlbumViewCubit>()..getItemModelAlbumView(),
                       child: BlocConsumer<AlbumViewCubit, AlbumViewState>(
                         listener: (context, state) {
-                        if (state.status == Status.error) {
-                          final errorMessage =
-                              state.errorMessage ?? 'Unkown error';
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(errorMessage),
-                              backgroundColor: Colors.red,
-                            ),
-                          );
-                        }
-                      },
+                          if (state.status == Status.error) {
+                            final errorMessage =
+                                state.errorMessage ?? 'Unkown error';
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(errorMessage),
+                                backgroundColor: Colors.red,
+                              ),
+                            );
+                          }
+                        },
                         builder: (context, state) {
                           final itemModelAlbumView = state.model;
 

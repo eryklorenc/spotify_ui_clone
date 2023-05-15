@@ -12,8 +12,7 @@ class EditProfileContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<EditProfileCubit>()
-        ..getItemModelEditProfile(),
+      create: (context) => getIt<EditProfileCubit>()..getItemModelEditProfile(),
       child: BlocBuilder<EditProfileCubit, EditProfileState>(
         builder: (context, state) {
           return Scaffold(
@@ -133,7 +132,7 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                   Row(
+                  Row(
                     children: const [
                       Icon(
                         Icons.lock,
