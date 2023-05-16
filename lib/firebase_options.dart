@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,15 +43,35 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCsI5FIVoK1Pzb237SuEyR9zT0L4aQg7d4',
+    appId: '1:335138690315:web:769bcc5594a69710873e0e',
+    messagingSenderId: '335138690315',
+    projectId: 'spotifyuiclone1120',
+    authDomain: 'spotifyuiclone1120.firebaseapp.com',
+    storageBucket: 'spotifyuiclone1120.appspot.com',
+    measurementId: 'G-SY8GF0T44W',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDGXo_a_WElw-VSYkP8qm73wtILrq-oAv8',
-    appId: '1:335138690315:android:afdb9a47e2077405873e0e',
+    appId: '1:335138690315:android:f53895c0d7a81621873e0e',
     messagingSenderId: '335138690315',
     projectId: 'spotifyuiclone1120',
     storageBucket: 'spotifyuiclone1120.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAXRTXoGlW4pBwLG2OBYEapZBJ5r5Hr8wA',
+    appId: '1:335138690315:ios:9d95e5b4dae293e1873e0e',
+    messagingSenderId: '335138690315',
+    projectId: 'spotifyuiclone1120',
+    storageBucket: 'spotifyuiclone1120.appspot.com',
+    iosClientId: '335138690315-md883jmj2kds307tkgb16qv20vj6k7ui.apps.googleusercontent.com',
+    iosBundleId: 'com.example.spotifyUiClone',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyAXRTXoGlW4pBwLG2OBYEapZBJ5r5Hr8wA',
     appId: '1:335138690315:ios:9d95e5b4dae293e1873e0e',
     messagingSenderId: '335138690315',

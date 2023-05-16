@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>743867528559-aub4o3449gf98v58er2vpkqm00tcqnek.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.743867528559-aub4o3449gf98v58er2vpkqm00tcqnek</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBdLoXr6lkquUoe_dl6GSCioCuz5JATH6o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>743867528559</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.spotifyUiClone</string>
+	<key>PROJECT_ID</key>
+	<string>netflixclone1120</string>
+	<key>STORAGE_BUCKET</key>
+	<string>netflixclone1120.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:743867528559:ios:41a6149932d4f8004ce49a</string>
+</dict>
+</plist>
