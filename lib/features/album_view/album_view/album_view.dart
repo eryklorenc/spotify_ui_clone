@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/injection_container.dart';
+import 'package:spotify_ui_clone/features/album_view/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
-import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
 
 class AlbumView extends StatelessWidget {
   final ImageProvider image;
@@ -19,7 +19,7 @@ class AlbumView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<AlbumViewCubit>()..getItemModelAlbumView(),
+      create: (context) => getIt<AlbumViewCubit>(),
       child: BlocBuilder<AlbumViewCubit, AlbumViewState>(
         builder: (context, state) {
           return Scaffold(
@@ -89,8 +89,8 @@ class AlbumView extends StatelessWidget {
                                       const SizedBox(
                                         height: 8,
                                       ),
-                                      Row(
-                                        children: const [
+                                      const Row(
+                                        children: [
                                           Image(
                                             image: AssetImage(
                                               'assets/logo.png',
@@ -118,8 +118,8 @@ class AlbumView extends StatelessWidget {
                                       Stack(
                                         clipBehavior: Clip.none,
                                         children: [
-                                          Row(
-                                            children: const [
+                                          const Row(
+                                            children: [
                                               Icon(Icons.favorite),
                                               SizedBox(
                                                 width: 14,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/widgets/good_album_card.dart';
+import 'package:spotify_ui_clone/features/home/widgets/good_album_card.dart';
 
 class GoodEvening extends StatelessWidget {
   const GoodEvening({
@@ -20,8 +20,8 @@ class GoodEvening extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-         Row(
-            children:  const [
+          const Row(
+            children: [
               GoodAlbumCard(
                 label: 'TOP 50 - Global',
                 image: AssetImage('assets/top50.jpg'),
@@ -38,8 +38,8 @@ class GoodEvening extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-       Row(
-            children:  const [
+          const Row(
+            children: [
               GoodAlbumCard(
                 label: 'TOP 50 - USA',
                 image: AssetImage('assets/album13.jpg'),
@@ -56,8 +56,8 @@ class GoodEvening extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-          Row(
-            children:  const [
+          const Row(
+            children: [
               GoodAlbumCard(
                 label: 'Best of NF',
                 image: AssetImage('assets/album9.jpg'),

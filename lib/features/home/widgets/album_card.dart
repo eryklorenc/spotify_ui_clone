@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/features/album_view/album_view/album_view.dart';
+import 'package:spotify_ui_clone/features/album_view/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
-import 'package:spotify_ui_clone/views/home/album_view/album_view.dart';
-import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
 
 class AlbumCard extends StatelessWidget {
   final ImageProvider image;

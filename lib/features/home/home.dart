@@ -2,20 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
 import 'package:spotify_ui_clone/app/core/injection_container.dart';
-import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
-import 'package:spotify_ui_clone/widgets/good_evening.dart';
-import 'package:spotify_ui_clone/widgets/recent_listening.dart';
-import 'package:spotify_ui_clone/widgets/recently_played_card.dart';
-import 'package:spotify_ui_clone/widgets/recommended_radio.dart';
+import 'package:spotify_ui_clone/features/album_view/album_view/cubit/album_view_cubit.dart';
+import 'package:spotify_ui_clone/features/home/widgets/good_evening.dart';
+import 'package:spotify_ui_clone/features/home/widgets/recent_listening.dart';
+import 'package:spotify_ui_clone/features/home/widgets/recently_played_card.dart';
+import 'package:spotify_ui_clone/features/home/widgets/recommended_radio.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
-  @override
-  State<HomeView> createState() => _HomeView();
-}
-
-class _HomeView extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,8 +60,8 @@ class _HomeView extends State<HomeView> {
                         children: [
                           Text('Recently Played',
                               style: Theme.of(context).textTheme.headlineSmall),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Icon(Icons.history),
                               SizedBox(
                                 width: 20,
@@ -78,8 +73,7 @@ class _HomeView extends State<HomeView> {
                       ),
                     ),
                     BlocProvider(
-                      create: (context) =>
-                          getIt<AlbumViewCubit>()..getItemModelAlbumView(),
+                      create: (context) => getIt<AlbumViewCubit>(),
                       child: BlocConsumer<AlbumViewCubit, AlbumViewState>(
                         listener: (context, state) {
                           if (state.status == Status.error) {

@@ -3,17 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/enums.dart';
 import 'package:spotify_ui_clone/app/core/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
-import 'package:spotify_ui_clone/views/profile/edit_profile/cubit/edit_profile_cubit.dart';
-import 'package:spotify_ui_clone/views/profile/edit_profile/edit_profile_content.dart';
+import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
+import 'package:spotify_ui_clone/features/profile/edit_profile/edit_profile_content.dart';
 
-class ProfileView extends StatefulWidget {
+class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
 
-  @override
-  State<ProfileView> createState() => _ProfileViewState();
-}
-
-class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,11 +55,11 @@ class _ProfileViewState extends State<ProfileView> {
                     const SizedBox(
                       height: 50,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Expanded(
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 '501',
                                 style: TextStyle(
@@ -85,7 +80,7 @@ class _ProfileViewState extends State<ProfileView> {
                         ),
                         Expanded(
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 '5.1K',
                                 style: TextStyle(
@@ -106,7 +101,7 @@ class _ProfileViewState extends State<ProfileView> {
                         ),
                         Expanded(
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 '2.3K',
                                 style: TextStyle(
@@ -133,8 +128,7 @@ class _ProfileViewState extends State<ProfileView> {
                     Padding(
                       padding: const EdgeInsets.all(20),
                       child: BlocProvider(
-                        create: (context) => getIt<EditProfileCubit>()
-                          ..getItemModelEditProfile(),
+                        create: (context) => getIt<EditProfileCubit>(),
                         child: BlocConsumer<EditProfileCubit, EditProfileState>(
                           listener: (context, state) {
                             if (state.status == Status.error) {
