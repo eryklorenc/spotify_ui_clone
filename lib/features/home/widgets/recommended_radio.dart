@@ -12,7 +12,9 @@ class RecommendedRadio extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(
+            16.0,
+          ),
           child: Text(
             'Recommended radio',
             style: Theme.of(context).textTheme.headlineSmall,
