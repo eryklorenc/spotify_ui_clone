@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:spotify_ui_clone/app/core/enums.dart';
+import 'package:spotify_ui_clone/app/core/config/enums.dart';
 import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
 import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
 

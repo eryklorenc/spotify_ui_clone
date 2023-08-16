@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:spotify_ui_clone/app/core/enums.dart';
-import 'package:spotify_ui_clone/app/core/injection_container.dart';
+import 'package:spotify_ui_clone/app/core/config/enums.dart';
+import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
-import 'package:spotify_ui_clone/views/profile/edit_profile/cubit/edit_profile_cubit.dart';
-import 'package:spotify_ui_clone/views/profile/edit_profile/edit_profile_content.dart';
+import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
+import 'package:spotify_ui_clone/features/profile/edit_profile/edit_profile_content.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -60,11 +60,11 @@ class _ProfileViewState extends State<ProfileView> {
                     const SizedBox(
                       height: 50,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Expanded(
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 '501',
                                 style: TextStyle(
@@ -85,7 +85,7 @@ class _ProfileViewState extends State<ProfileView> {
                         ),
                         Expanded(
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 '5.1K',
                                 style: TextStyle(
@@ -106,7 +106,7 @@ class _ProfileViewState extends State<ProfileView> {
                         ),
                         Expanded(
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 '2.3K',
                                 style: TextStyle(

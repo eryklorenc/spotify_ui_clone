@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/widgets/artist_card.dart';
+import 'package:spotify_ui_clone/features/library/widgets/artist_card.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({super.key});
@@ -55,8 +55,8 @@ class _LibraryViewState extends State<LibraryView> {
                       children: [
                         Text('Your favorite Music',
                             style: Theme.of(context).textTheme.headlineSmall),
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Icon(Icons.search),
                             SizedBox(
                               width: 20,
@@ -71,10 +71,10 @@ class _LibraryViewState extends State<LibraryView> {
                 const SizedBox(
                   height: 50,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(22),
+                const Padding(
+                  padding: EdgeInsets.all(22),
                   child: Column(
-                    children: const [
+                    children: [
                       ArtistCard(
                         artist: 'Drake',
                         image: AssetImage('assets/album1.jpg'),

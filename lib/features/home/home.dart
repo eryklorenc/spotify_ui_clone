@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:spotify_ui_clone/app/core/enums.dart';
-import 'package:spotify_ui_clone/app/core/injection_container.dart';
-import 'package:spotify_ui_clone/views/home/album_view/cubit/album_view_cubit.dart';
-import 'package:spotify_ui_clone/widgets/good_evening.dart';
-import 'package:spotify_ui_clone/widgets/recent_listening.dart';
-import 'package:spotify_ui_clone/widgets/recently_played_card.dart';
-import 'package:spotify_ui_clone/widgets/recommended_radio.dart';
+import 'package:spotify_ui_clone/app/core/config/enums.dart';
+import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
+import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
+import 'package:spotify_ui_clone/features/home/widgets/good_evening.dart';
+import 'package:spotify_ui_clone/features/home/widgets/recent_listening.dart';
+import 'package:spotify_ui_clone/features/home/widgets/recently_played_card.dart';
+import 'package:spotify_ui_clone/features/home/widgets/recommended_radio.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -65,8 +65,8 @@ class _HomeView extends State<HomeView> {
                         children: [
                           Text('Recently Played',
                               style: Theme.of(context).textTheme.headlineSmall),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Icon(Icons.history),
                               SizedBox(
                                 width: 20,

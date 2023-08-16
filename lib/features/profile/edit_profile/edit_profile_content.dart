@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:spotify_ui_clone/app/core/injection_container.dart';
+import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
+import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
-import 'package:spotify_ui_clone/views/profile/edit_profile/cubit/edit_profile_cubit.dart';
 
 class EditProfileContent extends StatelessWidget {
   const EditProfileContent({super.key, required this.itemModelEditProfile});
@@ -47,8 +47,8 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Icon(
                         Icons.person,
                         color: Colors.green,
@@ -132,8 +132,8 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Icon(
                         Icons.lock,
                         color: Colors.green,

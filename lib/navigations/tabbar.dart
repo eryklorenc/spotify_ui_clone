@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/views/home/home.dart';
-import 'package:spotify_ui_clone/views/library.dart';
-import 'package:spotify_ui_clone/views/profile/profile.dart';
-import 'package:spotify_ui_clone/views/search.dart';
+import 'package:spotify_ui_clone/features/home/home.dart';
+import 'package:spotify_ui_clone/features/library/library.dart';
+import 'package:spotify_ui_clone/features/profile/profile.dart';
+import 'package:spotify_ui_clone/features/search/search.dart';
 
 class Tabbar extends StatefulWidget {
   const Tabbar({super.key});
