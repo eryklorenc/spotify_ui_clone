@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/features/home/widgets/song_card.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class RecommendedRadio extends StatelessWidget {
   const RecommendedRadio({
@@ -16,7 +17,7 @@ class RecommendedRadio extends StatelessWidget {
             16.0,
           ),
           child: Text(
-            'Recommended radio',
+            S.of(context).recommended_radio,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),

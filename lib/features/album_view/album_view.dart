@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
 
 class AlbumView extends StatelessWidget {
@@ -89,9 +90,9 @@ class AlbumView extends StatelessWidget {
                                       const SizedBox(
                                         height: 8,
                                       ),
-                                      const Row(
+                                      Row(
                                         children: [
-                                          Image(
+                                          const Image(
                                             image: AssetImage(
                                               'assets/logo.png',
                                             ),
@@ -99,7 +100,7 @@ class AlbumView extends StatelessWidget {
                                             height: 52,
                                           ),
                                           Text(
-                                            'Spotify',
+                                            S.of(context).spotify,
                                           ),
                                         ],
                                       ),
@@ -107,7 +108,7 @@ class AlbumView extends StatelessWidget {
                                         height: 16,
                                       ),
                                       Text(
-                                        '2,768,123 likes 5h 3m',
+                                        S.of(context).likes,
                                         style: Theme.of(context)
                                             .textTheme
                                             .labelSmall,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SongCard extends StatelessWidget {
   final AssetImage image;
@@ -19,7 +20,7 @@ class SongCard extends StatelessWidget {
             height: 140,
           ),
           Text(
-            'Travis Scott, Taylor Swift, Eminem, Drake, ...',
+            S.of(context).travis_scott_taylor_swift_eminem_drake,
             style: Theme.of(context).textTheme.bodySmall,
             softWrap: true,
             overflow: TextOverflow.ellipsis,

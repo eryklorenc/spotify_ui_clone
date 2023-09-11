@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
 
 class EditProfileContent extends StatelessWidget {
@@ -37,9 +38,9 @@ class EditProfileContent extends StatelessWidget {
               ),
               child: ListView(
                 children: [
-                  const Text(
-                    'Settings',
-                    style: TextStyle(
+                  Text(
+                    S.of(context).settings,
+                    style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w500,
                     ),
@@ -47,18 +48,18 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Row(
+                  Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.person,
                         color: Colors.green,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Text(
-                        'Account',
-                        style: TextStyle(
+                        S.of(context).account,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -76,7 +77,7 @@ class EditProfileContent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Social',
+                        S.of(context).social,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
@@ -96,7 +97,7 @@ class EditProfileContent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Content settings',
+                        S.of(context).content_settings,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
@@ -116,7 +117,7 @@ class EditProfileContent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Language',
+                        S.of(context).language,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
@@ -132,18 +133,18 @@ class EditProfileContent extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Row(
+                  Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.lock,
                         color: Colors.green,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Text(
-                        'Privacy policy',
-                        style: TextStyle(
+                        S.of(context).privacy_policy,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),

@@ -5,6 +5,7 @@ import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/edit_profile_content.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -60,22 +61,22 @@ class _ProfileViewState extends State<ProfileView> {
                     const SizedBox(
                       height: 50,
                     ),
-                    const Row(
+                    Row(
                       children: [
                         Expanded(
                           child: Column(
                             children: [
                               Text(
-                                '501',
-                                style: TextStyle(
+                                S.of(context).numberfive,
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 35),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                'Music',
-                                style: TextStyle(
+                                S.of(context).music,
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w300),
@@ -87,16 +88,16 @@ class _ProfileViewState extends State<ProfileView> {
                           child: Column(
                             children: [
                               Text(
-                                '5.1K',
-                                style: TextStyle(
+                                S.of(context).numberfiveone,
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 35),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                'Followers',
-                                style: TextStyle(
+                                S.of(context).followers,
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w300),
@@ -108,16 +109,16 @@ class _ProfileViewState extends State<ProfileView> {
                           child: Column(
                             children: [
                               Text(
-                                '2.3K',
-                                style: TextStyle(
+                                S.of(context).numbertwo,
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 35),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                'Follow',
-                                style: TextStyle(
+                                S.of(context).follow,
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w300),
@@ -138,8 +139,8 @@ class _ProfileViewState extends State<ProfileView> {
                         child: BlocConsumer<EditProfileCubit, EditProfileState>(
                           listener: (context, state) {
                             if (state.status == Status.error) {
-                              final errorMessage =
-                                  state.errorMessage ?? 'Unkown error';
+                              final errorMessage = state.errorMessage ??
+                                  S.of(context).unkown_error;
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(errorMessage),
@@ -173,10 +174,12 @@ class _ProfileViewState extends State<ProfileView> {
                                             BorderRadius.circular(200),
                                       ),
                                     ),
-                                    child: const Text(
-                                      'Edit Profile',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 20),
+                                    child: Text(
+                                      S.of(context).edit_profile,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                      ),
                                     ),
                                   ),
                               ],
@@ -196,9 +199,12 @@ class _ProfileViewState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(200),
                         ),
                       ),
-                      child: const Text(
-                        'Sign out',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      child: Text(
+                        S.of(context).sign_out,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                   ],

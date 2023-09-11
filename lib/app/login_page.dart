@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:spotify_ui_clone/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
@@ -67,15 +68,15 @@ class _LoginPageState extends State<LoginPage> {
                           const SizedBox(
                             height: 70,
                           ),
-                          const Text(
-                            'Millions of songs.',
-                            style: TextStyle(
+                          Text(
+                            S.of(context).millions_of_songs,
+                            style: const TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.w500),
                             textAlign: TextAlign.center,
                           ),
-                          const Text(
-                            'Free on Spotify.',
-                            style: TextStyle(
+                          Text(
+                            S.of(context).free_on_spotify,
+                            style: const TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.w500),
                             textAlign: TextAlign.center,
                           ),
@@ -84,19 +85,19 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           TextField(
                             controller: emailController,
-                            decoration: const InputDecoration(
-                              labelStyle: TextStyle(
+                            decoration: InputDecoration(
+                              labelStyle: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
                               ),
-                              enabledBorder: OutlineInputBorder(
+                              enabledBorder: const OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
                               ),
-                              focusedBorder: OutlineInputBorder(
+                              focusedBorder: const OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
                               ),
-                              hintText: 'Email',
-                              suffixIcon: Icon(
+                              hintText: S.of(context).email,
+                              suffixIcon: const Icon(
                                 Icons.email_outlined,
                                 color: Colors.black,
                               ),
@@ -107,19 +108,19 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           TextField(
                             controller: passwordController,
-                            decoration: const InputDecoration(
-                              labelStyle: TextStyle(
+                            decoration: InputDecoration(
+                              labelStyle: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
                               ),
-                              enabledBorder: OutlineInputBorder(
+                              enabledBorder: const OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
                               ),
-                              focusedBorder: OutlineInputBorder(
+                              focusedBorder: const OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
                               ),
-                              hintText: 'Password',
-                              suffixIcon: Icon(
+                              hintText: S.of(context).password,
+                              suffixIcon: const Icon(
                                 Icons.lock_outline,
                                 color: Colors.black,
                               ),
@@ -166,8 +167,8 @@ class _LoginPageState extends State<LoginPage> {
                                   backgroundColor: Colors.white),
                               child: Text(
                                 isCreatingAccount == true
-                                    ? 'REGISTER'
-                                    : 'LOG IN',
+                                    ? S.of(context).register
+                                    : S.of(context).log_in,
                                 style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
@@ -178,26 +179,26 @@ class _LoginPageState extends State<LoginPage> {
                           const SizedBox(
                             height: 15,
                           ),
-                          const Row(
+                          Row(
                             children: [
-                              Expanded(
+                              const Expanded(
                                 child: Divider(
                                   color: Colors.grey,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Text(
-                                "OR",
-                                style: TextStyle(
+                                S.of(context).or,
+                                style: const TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Expanded(
+                              const Expanded(
                                 child: Divider(
                                   color: Colors.grey,
                                 ),
@@ -208,9 +209,9 @@ class _LoginPageState extends State<LoginPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Text(
-                                  "Already have an account?",
-                                  style: TextStyle(
+                                Text(
+                                  S.of(context).already_have_an_account,
+                                  style: const TextStyle(
                                       color: Colors.grey,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700),
@@ -221,9 +222,9 @@ class _LoginPageState extends State<LoginPage> {
                                       isCreatingAccount = false;
                                     });
                                   },
-                                  child: const Text(
-                                    "Sign In",
-                                    style: TextStyle(
+                                  child: Text(
+                                    S.of(context).sign_in,
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700,
@@ -238,9 +239,9 @@ class _LoginPageState extends State<LoginPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Text(
-                                  "Don't have an account?",
-                                  style: TextStyle(
+                                Text(
+                                  S.of(context).don_t_have_an_account,
+                                  style: const TextStyle(
                                       color: Colors.grey,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700),
@@ -251,9 +252,9 @@ class _LoginPageState extends State<LoginPage> {
                                       isCreatingAccount = true;
                                     });
                                   },
-                                  child: const Text(
-                                    "Sign Up",
-                                    style: TextStyle(
+                                  child: Text(
+                                    S.of(context).sign_up,
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700,

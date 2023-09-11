@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});
@@ -19,24 +20,27 @@ class _SearchViewState extends State<SearchView> {
           ),
           Center(
             child: Text(
-              'Search',
+              S.of(context).search,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.all(32.0),
+          Padding(
+            padding: const EdgeInsets.all(32.0),
             child: TextField(
               decoration: InputDecoration(
-                  fillColor: Colors.white,
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Colors.black,
-                    size: 28,
-                  ),
-                  filled: true,
-                  border: InputBorder.none,
-                  hintText: 'Find your music',
-                  hintStyle: TextStyle(color: Colors.grey)),
+                fillColor: Colors.white,
+                prefixIcon: const Icon(
+                  Icons.search,
+                  color: Colors.black,
+                  size: 28,
+                ),
+                filled: true,
+                border: InputBorder.none,
+                hintText: S.of(context).find_your_music,
+                hintStyle: const TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
             ),
           ),
           Expanded(
@@ -52,8 +56,13 @@ class _SearchViewState extends State<SearchView> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     color: Colors.deepPurple,
-                    child: const Text('Pop music',
-                        style: TextStyle(color: Colors.white, fontSize: 28)),
+                    child: Text(
+                      S.of(context).pop_music,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
                   ),
                 ),
                 ClipRRect(
@@ -61,8 +70,13 @@ class _SearchViewState extends State<SearchView> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     color: Colors.deepOrangeAccent,
-                    child: const Text('Rock',
-                        style: TextStyle(color: Colors.white, fontSize: 28)),
+                    child: Text(
+                      S.of(context).rock,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
                   ),
                 ),
                 ClipRRect(
@@ -70,8 +84,13 @@ class _SearchViewState extends State<SearchView> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     color: Colors.deepPurpleAccent,
-                    child: const Text('Rap',
-                        style: TextStyle(color: Colors.white, fontSize: 28)),
+                    child: Text(
+                      S.of(context).rap,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
                   ),
                 ),
                 ClipRRect(
@@ -79,8 +98,13 @@ class _SearchViewState extends State<SearchView> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     color: Colors.blueAccent,
-                    child: const Text('Jazz',
-                        style: TextStyle(color: Colors.white, fontSize: 28)),
+                    child: Text(
+                      S.of(context).jazz,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
                   ),
                 ),
                 ClipRRect(
@@ -88,8 +112,13 @@ class _SearchViewState extends State<SearchView> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     color: Colors.green,
-                    child: const Text('Reggae',
-                        style: TextStyle(color: Colors.white, fontSize: 28)),
+                    child: Text(
+                      S.of(context).reggae,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
                   ),
                 ),
                 ClipRRect(
@@ -97,8 +126,13 @@ class _SearchViewState extends State<SearchView> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     color: Colors.deepOrange,
-                    child: const Text('House',
-                        style: TextStyle(color: Colors.white, fontSize: 28)),
+                    child: Text(
+                      S.of(context).house,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
                   ),
                 ),
               ],

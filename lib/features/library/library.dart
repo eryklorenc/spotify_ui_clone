@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/features/library/widgets/artist_card.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({super.key});
@@ -53,8 +54,10 @@ class _LibraryViewState extends State<LibraryView> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Your favorite Music',
-                            style: Theme.of(context).textTheme.headlineSmall),
+                        Text(
+                          S.of(context).your_favorite_music,
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
                         const Row(
                           children: [
                             Icon(Icons.search),
@@ -71,34 +74,34 @@ class _LibraryViewState extends State<LibraryView> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(22),
+                Padding(
+                  padding: const EdgeInsets.all(22),
                   child: Column(
                     children: [
                       ArtistCard(
-                        artist: 'Drake',
-                        image: AssetImage('assets/album1.jpg'),
+                        artist: S.of(context).drake,
+                        image: const AssetImage('assets/album1.jpg'),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 35,
                       ),
                       ArtistCard(
-                        artist: 'Travis Scott',
-                        image: AssetImage('assets/album7.jpg'),
+                        artist: S.of(context).travis_scott,
+                        image: const AssetImage('assets/album7.jpg'),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 35,
                       ),
                       ArtistCard(
-                        artist: 'NF',
-                        image: AssetImage('assets/album4.jpg'),
+                        artist: S.of(context).nf,
+                        image: const AssetImage('assets/album4.jpg'),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 35,
                       ),
                       ArtistCard(
-                        artist: 'Eminem',
-                        image: AssetImage('assets/album10.jpg'),
+                        artist: S.of(context).eminem,
+                        image: const AssetImage('assets/album10.jpg'),
                       ),
                     ],
                   ),

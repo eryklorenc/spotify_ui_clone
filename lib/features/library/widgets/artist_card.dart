@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class ArtistCard extends StatelessWidget {
   final AssetImage image;
@@ -25,17 +26,19 @@ class ArtistCard extends StatelessWidget {
             Text(
               artist,
               style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 28,
-                  fontWeight: FontWeight.w800),
+                color: Colors.white,
+                fontSize: 28,
+                fontWeight: FontWeight.w800,
+              ),
             ),
-            const Text(
-              'Artist',
-              style: TextStyle(
-                  color: Colors.white24,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w300),
-            )
+            Text(
+              S.of(context).artist,
+              style: const TextStyle(
+                color: Colors.white24,
+                fontSize: 15,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
           ],
         ),
       ],

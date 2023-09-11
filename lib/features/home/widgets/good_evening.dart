@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/features/home/widgets/good_album_card.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class GoodEvening extends StatelessWidget {
   const GoodEvening({
@@ -14,60 +15,60 @@ class GoodEvening extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Good evening',
+            S.of(context).good_evening,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(
             height: 14,
           ),
-          const Row(
+          Row(
             children: [
               GoodAlbumCard(
-                label: 'TOP 50 - Global',
-                image: AssetImage('assets/top50.jpg'),
+                label: S.of(context).top_global,
+                image: const AssetImage('assets/top50.jpg'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 14,
               ),
               GoodAlbumCard(
-                label: 'Pop Remix',
-                image: AssetImage('assets/album6.jpg'),
+                label: S.of(context).pop_remix,
+                image: const AssetImage('assets/album6.jpg'),
               ),
             ],
           ),
           const SizedBox(
             height: 14,
           ),
-          const Row(
+          Row(
             children: [
               GoodAlbumCard(
-                label: 'TOP 50 - USA',
-                image: AssetImage('assets/album13.jpg'),
+                label: S.of(context).top_usa,
+                image: const AssetImage('assets/album13.jpg'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 14,
               ),
               GoodAlbumCard(
-                label: 'Workout',
-                image: AssetImage('assets/album12.jpg'),
+                label: S.of(context).workout,
+                image: const AssetImage('assets/album12.jpg'),
               ),
             ],
           ),
           const SizedBox(
             height: 14,
           ),
-          const Row(
+          Row(
             children: [
               GoodAlbumCard(
-                label: 'Best of NF',
-                image: AssetImage('assets/album9.jpg'),
+                label: S.of(context).best_of_nf,
+                image: const AssetImage('assets/album9.jpg'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 14,
               ),
               GoodAlbumCard(
-                label: 'Beats to Study',
-                image: AssetImage('assets/album10.jpg'),
+                label: S.of(context).beats_to_study,
+                image: const AssetImage('assets/album10.jpg'),
               ),
             ],
           ),

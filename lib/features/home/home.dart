@@ -7,6 +7,7 @@ import 'package:spotify_ui_clone/features/home/widgets/good_evening.dart';
 import 'package:spotify_ui_clone/features/home/widgets/recent_listening.dart';
 import 'package:spotify_ui_clone/features/home/widgets/recently_played_card.dart';
 import 'package:spotify_ui_clone/features/home/widgets/recommended_radio.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -63,8 +64,10 @@ class _HomeView extends State<HomeView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Recently Played',
-                              style: Theme.of(context).textTheme.headlineSmall),
+                          Text(
+                            S.of(context).recently_played,
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
                           const Row(
                             children: [
                               Icon(Icons.history),
@@ -83,8 +86,8 @@ class _HomeView extends State<HomeView> {
                       child: BlocConsumer<AlbumViewCubit, AlbumViewState>(
                         listener: (context, state) {
                           if (state.status == Status.error) {
-                            final errorMessage =
-                                state.errorMessage ?? 'Unkown error';
+                            final errorMessage = state.errorMessage ??
+                                S.of(context).unkown_error;
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(errorMessage),

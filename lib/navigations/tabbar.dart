@@ -3,6 +3,7 @@ import 'package:spotify_ui_clone/features/home/home.dart';
 import 'package:spotify_ui_clone/features/library/library.dart';
 import 'package:spotify_ui_clone/features/profile/profile.dart';
 import 'package:spotify_ui_clone/features/search/search.dart';
+import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class Tabbar extends StatefulWidget {
   const Tabbar({super.key});
@@ -24,15 +25,23 @@ class TabbarState extends State<Tabbar> {
               currentIndex = tabIndex;
             });
           },
-          items: const [
+          items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined), label: 'Home'),
+              icon: const Icon(Icons.home_outlined),
+              label: S.of(context).home,
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.search_outlined), label: 'Search'),
+              icon: const Icon(Icons.search_outlined),
+              label: S.of(context).search,
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.library_music_outlined),
-                label: 'Your Library'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+              icon: const Icon(Icons.library_music_outlined),
+              label: S.of(context).your_library,
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.person),
+              label: S.of(context).profile,
+            ),
           ]),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
