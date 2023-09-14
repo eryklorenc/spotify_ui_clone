@@ -75,6 +75,58 @@ class AuthCubit extends Cubit<AuthState> {
     );
   }
 
+  Future<void> changeEmail({
+    required String newEmail,
+    required String password,
+  }) async {
+    try {
+      await _loginRepository.changeEmail(
+        newEmail,
+        password,
+      );
+      emit(
+        AuthState(
+          user: state.user,
+          status: Status.success,
+        ),
+      );
+    } catch (error) {
+      emit(
+        AuthState(
+          user: state.user,
+          status: Status.error,
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
+
+  Future<void> changePassword({
+    required String newPassword,
+    required String oldPassword,
+  }) async {
+    try {
+      await _loginRepository.changePassword(
+        newPassword,
+        oldPassword,
+      );
+      emit(
+        AuthState(
+          user: state.user,
+          status: Status.success,
+        ),
+      );
+    } catch (error) {
+      emit(
+        AuthState(
+          user: state.user,
+          status: Status.error,
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
+
   StreamSubscription? _streamSubscription;
 
   Future<void> singOut() async {

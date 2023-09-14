@@ -60,5 +60,12 @@
     "rap": "Rap",
     "jazz": "Jazz",
     "reggae": "Reggae",
-    "house": "House"
+    "house": "House",
+    "change_email": "Change E-mail",
+    "change_password": "Change Password",
+    "email_settings": "E-mail",
+    "new_email": "New E-mail",
+    "save": "Save",
+    "email_has_been_changed": "Email has been changed",
+    "an_error_occurred_while_changing_the_email_address": "An error occurred while changing the email address"
 }

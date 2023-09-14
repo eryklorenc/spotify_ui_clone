@@ -659,6 +659,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Change E-mail`
+  String get change_email {
+    return Intl.message(
+      'Change E-mail',
+      name: 'change_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get change_password {
+    return Intl.message(
+      'Change Password',
+      name: 'change_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `E-mail`
+  String get email_settings {
+    return Intl.message(
+      'E-mail',
+      name: 'email_settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New E-mail`
+  String get new_email {
+    return Intl.message(
+      'New E-mail',
+      name: 'new_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email has been changed`
+  String get email_has_been_changed {
+    return Intl.message(
+      'Email has been changed',
+      name: 'email_has_been_changed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while changing the email address`
+  String get an_error_occurred_while_changing_the_email_address {
+    return Intl.message(
+      'An error occurred while changing the email address',
+      name: 'an_error_occurred_while_changing_the_email_address',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

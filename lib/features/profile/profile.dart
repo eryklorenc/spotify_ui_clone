@@ -69,7 +69,9 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).numberfive,
                                 style: const TextStyle(
-                                    color: Colors.white, fontSize: 35),
+                                  color: Colors.white,
+                                  fontSize: 35,
+                                ),
                               ),
                               const SizedBox(
                                 height: 10,
@@ -77,10 +79,11 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).music,
                                 style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w300),
-                              )
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -90,7 +93,9 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).numberfiveone,
                                 style: const TextStyle(
-                                    color: Colors.white, fontSize: 35),
+                                  color: Colors.white,
+                                  fontSize: 35,
+                                ),
                               ),
                               const SizedBox(
                                 height: 10,
@@ -98,10 +103,11 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).followers,
                                 style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w300),
-                              )
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -111,7 +117,9 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).numbertwo,
                                 style: const TextStyle(
-                                    color: Colors.white, fontSize: 35),
+                                  color: Colors.white,
+                                  fontSize: 35,
+                                ),
                               ),
                               const SizedBox(
                                 height: 10,
@@ -119,9 +127,10 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).follow,
                                 style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w300),
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w300,
+                                ),
                               ),
                             ],
                           ),

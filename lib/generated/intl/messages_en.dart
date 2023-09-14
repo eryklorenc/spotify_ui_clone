@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "account": MessageLookupByLibrary.simpleMessage("Account"),
         "already_have_an_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "an_error_occurred_while_changing_the_email_address":
+            MessageLookupByLibrary.simpleMessage(
+                "An error occurred while changing the email address"),
         "artist": MessageLookupByLibrary.simpleMessage("Artist"),
         "based_on_your_recent_listening": MessageLookupByLibrary.simpleMessage(
             "Based on your recent listening"),
@@ -34,6 +37,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_of_nf": MessageLookupByLibrary.simpleMessage("Best of NF"),
         "best_songs_global":
             MessageLookupByLibrary.simpleMessage("Best Songs - Global"),
+        "change_email": MessageLookupByLibrary.simpleMessage("Change E-mail"),
+        "change_password":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
         "content_settings":
             MessageLookupByLibrary.simpleMessage("Content settings"),
         "don_t_have_an_account":
@@ -41,6 +47,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "drake": MessageLookupByLibrary.simpleMessage("Drake"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_has_been_changed":
+            MessageLookupByLibrary.simpleMessage("Email has been changed"),
+        "email_settings": MessageLookupByLibrary.simpleMessage("E-mail"),
         "eminem": MessageLookupByLibrary.simpleMessage("Eminem"),
         "find_your_music":
             MessageLookupByLibrary.simpleMessage("Find your music"),
@@ -59,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "millions_of_songs":
             MessageLookupByLibrary.simpleMessage("Millions of songs."),
         "music": MessageLookupByLibrary.simpleMessage("Music"),
+        "new_email": MessageLookupByLibrary.simpleMessage("New E-mail"),
         "nf": MessageLookupByLibrary.simpleMessage("NF"),
         "numberfive": MessageLookupByLibrary.simpleMessage("501"),
         "numberfiveone": MessageLookupByLibrary.simpleMessage("5.1K"),
@@ -80,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("REGISTER"),
         "relax_mode": MessageLookupByLibrary.simpleMessage("Relax Mode"),
         "rock": MessageLookupByLibrary.simpleMessage("Rock"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign In"),
