@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
+import 'package:spotify_ui_clone/app/widgets/auth_text_field.dart';
+import 'package:spotify_ui_clone/app/widgets/components/account_button.dart';
+import 'package:spotify_ui_clone/app/widgets/components/auth_button.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:spotify_ui_clone/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({
+    super.key,
+  });
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -71,59 +76,40 @@ class _LoginPageState extends State<LoginPage> {
                           Text(
                             S.of(context).millions_of_songs,
                             style: const TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w500),
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                           Text(
                             S.of(context).free_on_spotify,
                             style: const TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w500),
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          TextField(
+                          AuthTextField(
                             controller: emailController,
-                            decoration: InputDecoration(
-                              labelStyle: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                              ),
-                              enabledBorder: const OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              focusedBorder: const OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              hintText: S.of(context).email,
-                              suffixIcon: const Icon(
-                                Icons.email_outlined,
-                                color: Colors.black,
-                              ),
+                            hintText: S.of(context).email,
+                            suffixIcon: const Icon(
+                              Icons.email_outlined,
+                              color: Colors.black,
                             ),
+                            obscureText: false,
                           ),
                           const SizedBox(
                             height: 10,
                           ),
-                          TextField(
+                          AuthTextField(
                             controller: passwordController,
-                            decoration: InputDecoration(
-                              labelStyle: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                              ),
-                              enabledBorder: const OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              focusedBorder: const OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              hintText: S.of(context).password,
-                              suffixIcon: const Icon(
-                                Icons.lock_outline,
-                                color: Colors.black,
-                              ),
+                            hintText: S.of(context).password,
+                            suffixIcon: const Icon(
+                              Icons.lock_outline,
+                              color: Colors.black,
                             ),
                             obscureText: true,
                           ),
@@ -134,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                           SizedBox(
                             height: 50,
                             width: 350,
-                            child: ElevatedButton(
+                            child: AuthButton(
                               onPressed: () async {
                                 if (isCreatingAccount == true) {
                                   try {
@@ -160,20 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                                   }
                                 }
                               },
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(31),
-                                  ),
-                                  backgroundColor: Colors.white),
-                              child: Text(
-                                isCreatingAccount == true
-                                    ? S.of(context).register
-                                    : S.of(context).log_in,
-                                style: const TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700),
-                              ),
+                              isCreatingAccount: isCreatingAccount,
                             ),
                           ),
                           const SizedBox(
@@ -206,63 +179,26 @@ class _LoginPageState extends State<LoginPage> {
                             ],
                           ),
                           if (isCreatingAccount == true) ...[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
+                            AccountButton(
+                              onPressed: () {
+                                setState(() {
+                                  isCreatingAccount = false;
+                                });
+                              },
+                              accountInfo:
                                   S.of(context).already_have_an_account,
-                                  style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      isCreatingAccount = false;
-                                    });
-                                  },
-                                  child: Text(
-                                    S.of(context).sign_in,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700,
-                                      decoration: TextDecoration.underline,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                              sign: S.of(context).sign_in,
                             ),
                           ],
                           if (isCreatingAccount == false) ...[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  S.of(context).don_t_have_an_account,
-                                  style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      isCreatingAccount = true;
-                                    });
-                                  },
-                                  child: Text(
-                                    S.of(context).sign_up,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700,
-                                      decoration: TextDecoration.underline,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            AccountButton(
+                              accountInfo: S.of(context).don_t_have_an_account,
+                              onPressed: () {
+                                setState(() {
+                                  isCreatingAccount = true;
+                                });
+                              },
+                              sign: S.of(context).sign_up,
                             ),
                           ],
                         ],
