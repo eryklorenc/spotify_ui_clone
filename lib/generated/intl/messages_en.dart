@@ -40,8 +40,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_email": MessageLookupByLibrary.simpleMessage("Change E-mail"),
         "change_password":
             MessageLookupByLibrary.simpleMessage("Change Password"),
+        "confirm_new_password":
+            MessageLookupByLibrary.simpleMessage("Confirm New Password"),
         "content_settings":
             MessageLookupByLibrary.simpleMessage("Content settings"),
+        "current_password":
+            MessageLookupByLibrary.simpleMessage("Current Password"),
         "don_t_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "drake": MessageLookupByLibrary.simpleMessage("Drake"),
@@ -51,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email has been changed"),
         "email_settings": MessageLookupByLibrary.simpleMessage("E-mail"),
         "eminem": MessageLookupByLibrary.simpleMessage("Eminem"),
+        "error_password_does_not_match": MessageLookupByLibrary.simpleMessage(
+            "Error, password does not match"),
         "find_your_music":
             MessageLookupByLibrary.simpleMessage("Find your music"),
         "follow": MessageLookupByLibrary.simpleMessage("Follow"),
@@ -69,12 +75,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Millions of songs."),
         "music": MessageLookupByLibrary.simpleMessage("Music"),
         "new_email": MessageLookupByLibrary.simpleMessage("New E-mail"),
+        "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "nf": MessageLookupByLibrary.simpleMessage("NF"),
         "numberfive": MessageLookupByLibrary.simpleMessage("501"),
         "numberfiveone": MessageLookupByLibrary.simpleMessage("5.1K"),
         "numbertwo": MessageLookupByLibrary.simpleMessage("2.3K"),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_has_been_changed":
+            MessageLookupByLibrary.simpleMessage("Password has been changed"),
         "pop_music": MessageLookupByLibrary.simpleMessage("Pop music"),
         "pop_remix": MessageLookupByLibrary.simpleMessage("Pop Remix"),
         "privacy_policy":

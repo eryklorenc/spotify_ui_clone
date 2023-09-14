@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/change_email.dart';
+import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/change_password.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/custom_app_bar.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/settings_content.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
@@ -89,7 +90,13 @@ class EditProfileContent extends StatelessWidget {
                   ),
                   SettingsContent(
                     text: S.of(context).change_password,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const ChangePassword(),
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(
                     height: 40,
