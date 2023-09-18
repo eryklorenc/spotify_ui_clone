@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/config/enums.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/components/save_button.dart';
@@ -39,7 +40,7 @@ class ChangePassword extends StatelessWidget {
                     child: Text(
                       S.of(context).password,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
                       ),
@@ -51,7 +52,7 @@ class ChangePassword extends StatelessWidget {
                     text: S.of(context).current_password,
                     suffixIcon: const Icon(
                       Icons.lock_outlined,
-                      color: Colors.grey,
+                      color: AppColors.grey,
                       size: 27,
                     ),
                   ),
@@ -63,7 +64,7 @@ class ChangePassword extends StatelessWidget {
                       text: S.of(context).new_password,
                       suffixIcon: const Icon(
                         Icons.lock_outlined,
-                        color: Colors.grey,
+                        color: AppColors.grey,
                         size: 27,
                       ),
                     ),
@@ -76,7 +77,7 @@ class ChangePassword extends StatelessWidget {
                       text: S.of(context).confirm_new_password,
                       suffixIcon: const Icon(
                         Icons.lock_outlined,
-                        color: Colors.grey,
+                        color: AppColors.grey,
                         size: 27,
                       ),
                     ),
@@ -105,11 +106,11 @@ class ChangePassword extends StatelessWidget {
                                     content: Text(
                                       S.of(context).password_has_been_changed,
                                       style: const TextStyle(
-                                        color: Colors.white,
+                                        color: AppColors.white,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    backgroundColor: Colors.green,
+                                    backgroundColor: AppColors.green,
                                   ),
                                 );
                               }
@@ -120,11 +121,11 @@ class ChangePassword extends StatelessWidget {
                                 content: Text(
                                   S.of(context).error_password_does_not_match,
                                   style: const TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                backgroundColor: Colors.green,
+                                backgroundColor: AppColors.green,
                               ),
                             );
                           }

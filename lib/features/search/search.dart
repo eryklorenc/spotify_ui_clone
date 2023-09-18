@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SearchView extends StatefulWidget {
@@ -28,17 +29,17 @@ class _SearchViewState extends State<SearchView> {
             padding: const EdgeInsets.all(32.0),
             child: TextField(
               decoration: InputDecoration(
-                fillColor: Colors.white,
+                fillColor: AppColors.white,
                 prefixIcon: const Icon(
                   Icons.search,
-                  color: Colors.black,
+                  color: AppColors.dark,
                   size: 28,
                 ),
                 filled: true,
                 border: InputBorder.none,
                 hintText: S.of(context).find_your_music,
                 hintStyle: const TextStyle(
-                  color: Colors.grey,
+                  color: AppColors.grey,
                 ),
               ),
             ),
@@ -55,11 +56,11 @@ class _SearchViewState extends State<SearchView> {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    color: Colors.deepPurple,
+                    color: AppColors.deepPurple,
                     child: Text(
                       S.of(context).pop_music,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                       ),
                     ),
@@ -69,11 +70,11 @@ class _SearchViewState extends State<SearchView> {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    color: Colors.deepOrangeAccent,
+                    color: AppColors.deepOrangeAccent,
                     child: Text(
                       S.of(context).rock,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                       ),
                     ),
@@ -83,11 +84,11 @@ class _SearchViewState extends State<SearchView> {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    color: Colors.deepPurpleAccent,
+                    color: AppColors.deepPurpleAccent,
                     child: Text(
                       S.of(context).rap,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                       ),
                     ),
@@ -97,11 +98,11 @@ class _SearchViewState extends State<SearchView> {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    color: Colors.blueAccent,
+                    color: AppColors.blueAccent,
                     child: Text(
                       S.of(context).jazz,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                       ),
                     ),
@@ -111,11 +112,11 @@ class _SearchViewState extends State<SearchView> {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    color: Colors.green,
+                    color: AppColors.green,
                     child: Text(
                       S.of(context).reggae,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                       ),
                     ),
@@ -125,11 +126,11 @@ class _SearchViewState extends State<SearchView> {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    color: Colors.deepOrange,
+                    color: AppColors.deepOrange,
                     child: Text(
                       S.of(context).house,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                       ),
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
@@ -27,7 +28,7 @@ class AlbumView extends StatelessWidget {
             body: Stack(
               children: [
                 Container(
-                  color: Colors.pink,
+                  color: AppColors.pink,
                 ),
                 SafeArea(
                   child: SingleChildScrollView(
@@ -43,10 +44,10 @@ class AlbumView extends StatelessWidget {
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
                               colors: [
-                                Colors.black.withOpacity(0),
-                                Colors.black.withOpacity(0),
-                                Colors.black.withOpacity(0),
-                                Colors.black.withOpacity(1),
+                                AppColors.dark.withOpacity(0),
+                                AppColors.dark.withOpacity(0),
+                                AppColors.dark.withOpacity(0),
+                                AppColors.dark.withOpacity(1),
                               ],
                             ),
                           ),
@@ -60,7 +61,7 @@ class AlbumView extends StatelessWidget {
                                 Container(
                                   decoration: BoxDecoration(boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.5),
+                                      color: AppColors.black.withOpacity(0.5),
                                       offset: const Offset(0, 20),
                                       blurRadius: 32,
                                       spreadRadius: 16,
@@ -137,7 +138,7 @@ class AlbumView extends StatelessWidget {
                                               alignment: Alignment.center,
                                               decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
-                                                color: Color(0xff14D860),
+                                                color: AppColors.green0,
                                               ),
                                               child: const Icon(
                                                 Icons.play_arrow,
@@ -155,7 +156,7 @@ class AlbumView extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          color: Colors.black,
+                          color: AppColors.dark,
                           height: 400,
                         )
                       ],

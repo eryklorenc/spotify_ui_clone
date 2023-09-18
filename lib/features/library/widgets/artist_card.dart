@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class ArtistCard extends StatelessWidget {
@@ -26,7 +27,7 @@ class ArtistCard extends StatelessWidget {
             Text(
               artist,
               style: const TextStyle(
-                color: Colors.white,
+                color: AppColors.white,
                 fontSize: 28,
                 fontWeight: FontWeight.w800,
               ),
@@ -34,7 +35,7 @@ class ArtistCard extends StatelessWidget {
             Text(
               S.of(context).artist,
               style: const TextStyle(
-                color: Colors.white24,
+                color: AppColors.white2,
                 fontSize: 15,
                 fontWeight: FontWeight.w300,
               ),

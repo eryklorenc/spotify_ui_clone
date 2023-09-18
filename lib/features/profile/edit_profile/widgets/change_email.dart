@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/config/enums.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/custom_app_bar.dart';
@@ -38,7 +39,7 @@ class ChangeEmail extends StatelessWidget {
                     child: Text(
                       S.of(context).new_email,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
                       ),
@@ -50,7 +51,7 @@ class ChangeEmail extends StatelessWidget {
                     text: S.of(context).change_email,
                     suffixIcon: const Icon(
                       Icons.mail_outlined,
-                      color: Colors.grey,
+                      color: AppColors.grey,
                       size: 27,
                     ),
                   ),
@@ -59,7 +60,7 @@ class ChangeEmail extends StatelessWidget {
                     child: Text(
                       S.of(context).password,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
                       ),
@@ -71,7 +72,7 @@ class ChangeEmail extends StatelessWidget {
                     text: S.of(context).password,
                     suffixIcon: const Icon(
                       Icons.lock_outlined,
-                      color: Colors.grey,
+                      color: AppColors.grey,
                       size: 27,
                     ),
                   ),
@@ -93,11 +94,11 @@ class ChangeEmail extends StatelessWidget {
                                   content: Text(
                                     S.of(context).email_has_been_changed,
                                     style: const TextStyle(
-                                      color: Colors.white,
+                                      color: AppColors.white,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: AppColors.green,
                                 ),
                               );
                             } else if (state.status == Status.error) {
@@ -108,11 +109,11 @@ class ChangeEmail extends StatelessWidget {
                                         .of(context)
                                         .an_error_occurred_while_changing_the_email_address,
                                     style: const TextStyle(
-                                      color: Colors.white,
+                                      color: AppColors.white,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: AppColors.green,
                                 ),
                               );
                             }

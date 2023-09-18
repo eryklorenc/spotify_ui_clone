@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback onPressed;
@@ -19,7 +20,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         onPressed: onPressed,
         icon: const Icon(
           Icons.arrow_back,
-          color: Colors.green,
+          color: AppColors.green,
         ),
       ),
       title: Text(

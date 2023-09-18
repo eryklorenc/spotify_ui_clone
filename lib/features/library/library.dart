@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/features/library/widgets/artist_card.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
@@ -24,9 +25,9 @@ class _LibraryViewState extends State<LibraryView> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.white.withOpacity(0.3),
-                  Colors.white.withOpacity(0.1),
-                  Colors.black.withOpacity(0),
+                  AppColors.white.withOpacity(0.3),
+                  AppColors.white.withOpacity(0.1),
+                  AppColors.dark.withOpacity(0),
                 ],
               ),
             ),
@@ -37,8 +38,8 @@ class _LibraryViewState extends State<LibraryView> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomRight,
                 colors: [
-                  Colors.white.withOpacity(0),
-                  Colors.black.withOpacity(1),
+                  AppColors.white.withOpacity(0),
+                  AppColors.dark.withOpacity(1),
                 ],
               ),
             ),

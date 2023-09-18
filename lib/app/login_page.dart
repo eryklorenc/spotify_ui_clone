@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/app/widgets/auth_text_field.dart';
 import 'package:spotify_ui_clone/app/widgets/components/account_button.dart';
@@ -42,9 +43,9 @@ class _LoginPageState extends State<LoginPage> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Colors.white.withOpacity(0.3),
-                        Colors.white.withOpacity(0.1),
-                        Colors.black.withOpacity(0),
+                        AppColors.white.withOpacity(0.3),
+                        AppColors.white.withOpacity(0.1),
+                        AppColors.dark.withOpacity(0),
                       ],
                     ),
                   ),
@@ -55,8 +56,8 @@ class _LoginPageState extends State<LoginPage> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomRight,
                       colors: [
-                        Colors.white.withOpacity(0),
-                        Colors.black.withOpacity(1),
+                        AppColors.white.withOpacity(0),
+                        AppColors.dark.withOpacity(1),
                       ],
                     ),
                   ),
@@ -97,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                             hintText: S.of(context).email,
                             suffixIcon: const Icon(
                               Icons.email_outlined,
-                              color: Colors.black,
+                              color: AppColors.black,
                             ),
                             obscureText: false,
                           ),
@@ -109,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                             hintText: S.of(context).password,
                             suffixIcon: const Icon(
                               Icons.lock_outline,
-                              color: Colors.black,
+                              color: AppColors.black,
                             ),
                             obscureText: true,
                           ),
@@ -156,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                             children: [
                               const Expanded(
                                 child: Divider(
-                                  color: Colors.grey,
+                                  color: AppColors.grey,
                                 ),
                               ),
                               const SizedBox(
@@ -165,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
                               Text(
                                 S.of(context).or,
                                 style: const TextStyle(
-                                  color: Colors.grey,
+                                  color: AppColors.grey,
                                 ),
                               ),
                               const SizedBox(
@@ -173,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               const Expanded(
                                 child: Divider(
-                                  color: Colors.grey,
+                                  color: AppColors.grey,
                                 ),
                               ),
                             ],

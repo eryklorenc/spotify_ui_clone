@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/config/enums.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/features/home/widgets/good_evening.dart';
@@ -31,9 +32,9 @@ class _HomeView extends State<HomeView> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.white.withOpacity(0.5),
-                  Colors.white.withOpacity(0.1),
-                  Colors.black.withOpacity(0),
+                  AppColors.white.withOpacity(0.5),
+                  AppColors.white.withOpacity(0.1),
+                  AppColors.dark.withOpacity(0),
                 ],
               ),
             ),
@@ -46,8 +47,8 @@ class _HomeView extends State<HomeView> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.white.withOpacity(0),
-                    Colors.black.withOpacity(1),
+                    AppColors.white.withOpacity(0),
+                    AppColors.dark.withOpacity(1),
                   ],
                 ),
               ),
@@ -91,7 +92,7 @@ class _HomeView extends State<HomeView> {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(errorMessage),
-                                backgroundColor: Colors.red,
+                                backgroundColor: AppColors.red,
                               ),
                             );
                           }

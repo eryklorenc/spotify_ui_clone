@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SaveButton extends StatelessWidget {
@@ -15,7 +16,7 @@ class SaveButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         fixedSize: const Size(180, 50),
-        backgroundColor: Colors.green,
+        backgroundColor: AppColors.green,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
@@ -24,7 +25,7 @@ class SaveButton extends StatelessWidget {
         S.of(context).save,
         style: const TextStyle(
           fontSize: 18,
-          color: Colors.white,
+          color: AppColors.white,
           fontWeight: FontWeight.w500,
         ),
       ),

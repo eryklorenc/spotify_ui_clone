@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 
 class ProfileTextField extends StatelessWidget {
   final bool obscureText;
@@ -21,22 +22,22 @@ class ProfileTextField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: text,
         labelStyle: const TextStyle(
-          color: Colors.grey,
+          color: AppColors.grey,
           fontWeight: FontWeight.w500,
         ),
         filled: true,
-        fillColor: const Color.fromARGB(255, 41, 39, 39),
+        fillColor: AppColors.black,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color.fromARGB(255, 32, 31, 31),
+            color: AppColors.black0,
           ),
         ),
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color.fromARGB(255, 32, 31, 31),
+            color: AppColors.black0,
           ),
         ),
         suffixIcon: suffixIcon,

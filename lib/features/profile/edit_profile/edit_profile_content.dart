@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/change_email.dart';
@@ -45,7 +46,7 @@ class EditProfileContent extends StatelessWidget {
                     children: [
                       const Icon(
                         Icons.person,
-                        color: Colors.green,
+                        color: AppColors.green,
                       ),
                       const SizedBox(
                         width: 8,
@@ -134,7 +135,7 @@ class EditProfileContent extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.grey[600],
+                            color: AppColors.grey[600],
                           ),
                         ),
                       ),

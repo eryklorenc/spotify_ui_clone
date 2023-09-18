@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 
 class GoodAlbumCard extends StatelessWidget {
   final AssetImage image;
@@ -15,7 +16,7 @@ class GoodAlbumCard extends StatelessWidget {
       flex: 1,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white10,
+          color: AppColors.white3,
           borderRadius: BorderRadius.circular(4),
         ),
         clipBehavior: Clip.antiAlias,

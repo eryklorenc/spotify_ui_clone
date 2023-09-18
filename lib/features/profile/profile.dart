@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/config/enums.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
@@ -29,9 +30,9 @@ class _ProfileViewState extends State<ProfileView> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.white.withOpacity(0.3),
-                  Colors.white.withOpacity(0.1),
-                  Colors.black.withOpacity(0),
+                  AppColors.white.withOpacity(0.3),
+                  AppColors.white.withOpacity(0.1),
+                  AppColors.dark.withOpacity(0),
                 ],
               ),
             ),
@@ -42,8 +43,8 @@ class _ProfileViewState extends State<ProfileView> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomRight,
                 colors: [
-                  Colors.white.withOpacity(0),
-                  Colors.black.withOpacity(1),
+                  AppColors.white.withOpacity(0),
+                  AppColors.dark.withOpacity(1),
                 ],
               ),
             ),
@@ -69,7 +70,7 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).numberfive,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: 35,
                                 ),
                               ),
@@ -79,7 +80,7 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).music,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: 25,
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -93,7 +94,7 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).numberfiveone,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: 35,
                                 ),
                               ),
@@ -103,7 +104,7 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).followers,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: 25,
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -117,7 +118,7 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).numbertwo,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: 35,
                                 ),
                               ),
@@ -127,7 +128,7 @@ class _ProfileViewState extends State<ProfileView> {
                               Text(
                                 S.of(context).follow,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: 25,
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -153,7 +154,7 @@ class _ProfileViewState extends State<ProfileView> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(errorMessage),
-                                  backgroundColor: Colors.red,
+                                  backgroundColor: AppColors.red,
                                 ),
                               );
                             }
@@ -177,7 +178,7 @@ class _ProfileViewState extends State<ProfileView> {
                                     },
                                     style: ElevatedButton.styleFrom(
                                       fixedSize: const Size(140, 50),
-                                      backgroundColor: Colors.green,
+                                      backgroundColor: AppColors.green,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(200),
@@ -186,7 +187,7 @@ class _ProfileViewState extends State<ProfileView> {
                                     child: Text(
                                       S.of(context).edit_profile,
                                       style: const TextStyle(
-                                        color: Colors.white,
+                                        color: AppColors.white,
                                         fontSize: 20,
                                       ),
                                     ),
@@ -203,7 +204,7 @@ class _ProfileViewState extends State<ProfileView> {
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: const Size(140, 50),
-                        backgroundColor: Colors.green,
+                        backgroundColor: AppColors.green,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(200),
                         ),
@@ -211,7 +212,7 @@ class _ProfileViewState extends State<ProfileView> {
                       child: Text(
                         S.of(context).sign_out,
                         style: const TextStyle(
-                          color: Colors.white,
+                          color: AppColors.white,
                           fontSize: 20,
                         ),
                       ),
