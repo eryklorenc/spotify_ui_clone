@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SaveButton extends StatelessWidget {
@@ -23,11 +24,7 @@ class SaveButton extends StatelessWidget {
       ),
       child: Text(
         S.of(context).save,
-        style: const TextStyle(
-          fontSize: 18,
-          color: AppColors.white,
-          fontWeight: FontWeight.w500,
-        ),
+        style: Theme.of(context).xTextTheme.h4,
       ),
     );
   }

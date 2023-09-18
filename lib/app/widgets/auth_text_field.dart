@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 
 class AuthTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -20,15 +21,16 @@ class AuthTextField extends StatelessWidget {
       obscureText: obscureText,
       controller: controller,
       decoration: InputDecoration(
-        labelStyle: const TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.w400,
-        ),
+        labelStyle: Theme.of(context).xTextTheme.notification0,
         enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),
+          borderSide: BorderSide(
+            color: Colors.black,
+          ),
         ),
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),
+          borderSide: BorderSide(
+            color: Colors.black,
+          ),
         ),
         hintText: hintText,
         suffixIcon: suffixIcon,

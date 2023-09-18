@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SearchView extends StatefulWidget {
@@ -59,10 +60,7 @@ class _SearchViewState extends State<SearchView> {
                     color: AppColors.deepPurple,
                     child: Text(
                       S.of(context).pop_music,
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 28,
-                      ),
+                      style: Theme.of(context).xTextTheme.body7,
                     ),
                   ),
                 ),
@@ -73,10 +71,7 @@ class _SearchViewState extends State<SearchView> {
                     color: AppColors.deepOrangeAccent,
                     child: Text(
                       S.of(context).rock,
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 28,
-                      ),
+                      style: Theme.of(context).xTextTheme.body7,
                     ),
                   ),
                 ),
@@ -87,10 +82,7 @@ class _SearchViewState extends State<SearchView> {
                     color: AppColors.deepPurpleAccent,
                     child: Text(
                       S.of(context).rap,
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 28,
-                      ),
+                      style: Theme.of(context).xTextTheme.body7,
                     ),
                   ),
                 ),
@@ -101,10 +93,7 @@ class _SearchViewState extends State<SearchView> {
                     color: AppColors.blueAccent,
                     child: Text(
                       S.of(context).jazz,
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 28,
-                      ),
+                      style: Theme.of(context).xTextTheme.body7,
                     ),
                   ),
                 ),
@@ -115,10 +104,7 @@ class _SearchViewState extends State<SearchView> {
                     color: AppColors.green,
                     child: Text(
                       S.of(context).reggae,
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 28,
-                      ),
+                      style: Theme.of(context).xTextTheme.body7,
                     ),
                   ),
                 ),
@@ -129,10 +115,7 @@ class _SearchViewState extends State<SearchView> {
                     color: AppColors.deepOrange,
                     child: Text(
                       S.of(context).house,
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 28,
-                      ),
+                      style: Theme.of(context).xTextTheme.body7,
                     ),
                   ),
                 ),

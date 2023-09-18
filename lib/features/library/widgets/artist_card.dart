@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class ArtistCard extends StatelessWidget {
@@ -26,19 +26,11 @@ class ArtistCard extends StatelessWidget {
           children: [
             Text(
               artist,
-              style: const TextStyle(
-                color: AppColors.white,
-                fontSize: 28,
-                fontWeight: FontWeight.w800,
-              ),
+              style: Theme.of(context).xTextTheme.display0,
             ),
             Text(
               S.of(context).artist,
-              style: const TextStyle(
-                color: AppColors.white2,
-                fontSize: 15,
-                fontWeight: FontWeight.w300,
-              ),
+              style: Theme.of(context).xTextTheme.display1,
             ),
           ],
         ),

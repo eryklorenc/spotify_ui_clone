@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/config/enums.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
@@ -69,21 +70,14 @@ class _ProfileViewState extends State<ProfileView> {
                             children: [
                               Text(
                                 S.of(context).numberfive,
-                                style: const TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 35,
-                                ),
+                                style: Theme.of(context).xTextTheme.h0,
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 S.of(context).music,
-                                style: const TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w300,
-                                ),
+                                style: Theme.of(context).xTextTheme.h1,
                               ),
                             ],
                           ),
@@ -93,21 +87,14 @@ class _ProfileViewState extends State<ProfileView> {
                             children: [
                               Text(
                                 S.of(context).numberfiveone,
-                                style: const TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 35,
-                                ),
+                                style: Theme.of(context).xTextTheme.h0,
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 S.of(context).followers,
-                                style: const TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w300,
-                                ),
+                                style: Theme.of(context).xTextTheme.h1,
                               ),
                             ],
                           ),
@@ -117,21 +104,14 @@ class _ProfileViewState extends State<ProfileView> {
                             children: [
                               Text(
                                 S.of(context).numbertwo,
-                                style: const TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 35,
-                                ),
+                                style: Theme.of(context).xTextTheme.h0,
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 S.of(context).follow,
-                                style: const TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w300,
-                                ),
+                                style: Theme.of(context).xTextTheme.h1,
                               ),
                             ],
                           ),
@@ -186,10 +166,7 @@ class _ProfileViewState extends State<ProfileView> {
                                     ),
                                     child: Text(
                                       S.of(context).edit_profile,
-                                      style: const TextStyle(
-                                        color: AppColors.white,
-                                        fontSize: 20,
-                                      ),
+                                      style: Theme.of(context).xTextTheme.h2,
                                     ),
                                   ),
                               ],
@@ -211,10 +188,7 @@ class _ProfileViewState extends State<ProfileView> {
                       ),
                       child: Text(
                         S.of(context).sign_out,
-                        style: const TextStyle(
-                          color: AppColors.white,
-                          fontSize: 20,
-                        ),
+                        style: Theme.of(context).xTextTheme.h2,
                       ),
                     ),
                   ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 
 class SettingsContent extends StatelessWidget {
   final String text;
@@ -18,11 +19,7 @@ class SettingsContent extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-            color: AppColors.grey[600],
-          ),
+          style: Theme.of(context).xTextTheme.body3,
         ),
         IconButton(
           onPressed: onPressed,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 
 class AccountButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -19,22 +20,13 @@ class AccountButton extends StatelessWidget {
       children: [
         Text(
           accountInfo,
-          style: const TextStyle(
-            color: Colors.grey,
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
-          ),
+          style: Theme.of(context).xTextTheme.titleLight,
         ),
         TextButton(
           onPressed: onPressed,
           child: Text(
             sign,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              decoration: TextDecoration.underline,
-            ),
+            style: Theme.of(context).xTextTheme.notification1,
           ),
         ),
       ],

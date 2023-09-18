@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/auth_page.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         scaffoldBackgroundColor: AppColors.dark,
         brightness: Brightness.dark,
+        extensions: [
+          AppTextThemeExtension.initialize(),
+        ],
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: AppColors.white3,
           type: BottomNavigationBarType.fixed,

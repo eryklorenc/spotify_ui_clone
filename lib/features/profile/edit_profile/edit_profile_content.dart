@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/change_email.dart';
@@ -53,10 +54,7 @@ class EditProfileContent extends StatelessWidget {
                       ),
                       Text(
                         S.of(context).account,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).xTextTheme.body1,
                       ),
                     ],
                   ),
@@ -113,10 +111,7 @@ class EditProfileContent extends StatelessWidget {
                       ),
                       Text(
                         S.of(context).privacy_policy,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).xTextTheme.body1,
                       ),
                     ],
                   ),
@@ -132,11 +127,7 @@ class EditProfileContent extends StatelessWidget {
                       Expanded(
                         child: Text(
                           itemModelEditProfile.content.toString(),
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.grey[600],
-                          ),
+                          style: Theme.of(context).xTextTheme.body2,
                         ),
                       ),
                     ],
