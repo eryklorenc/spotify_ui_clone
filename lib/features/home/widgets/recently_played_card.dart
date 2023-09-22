@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
 import 'package:spotify_ui_clone/features/home/widgets/album_card.dart';
@@ -25,7 +26,7 @@ class RecentlyPlayedCard extends StatelessWidget {
             children: [
               AlbumCard(
                 label: S.of(context).best_mode,
-                image: const AssetImage('assets/album3.jpg'),
+                image: Assets.album3.image().image,
                 itemModelAlbumView: itemModelAlbumView,
               ),
               const SizedBox(
@@ -33,7 +34,7 @@ class RecentlyPlayedCard extends StatelessWidget {
               ),
               AlbumCard(
                 label: S.of(context).relax_mode,
-                image: const AssetImage('assets/album1.jpg'),
+                image: Assets.album1.image().image,
                 itemModelAlbumView: itemModelAlbumView,
               ),
               const SizedBox(
@@ -41,7 +42,7 @@ class RecentlyPlayedCard extends StatelessWidget {
               ),
               AlbumCard(
                 label: S.of(context).best_songs_global,
-                image: const AssetImage('assets/album2.jpg'),
+                image: Assets.album2.image().image,
                 itemModelAlbumView: itemModelAlbumView,
               ),
               const SizedBox(
@@ -49,7 +50,7 @@ class RecentlyPlayedCard extends StatelessWidget {
               ),
               AlbumCard(
                 label: S.of(context).rap_mode,
-                image: const AssetImage('assets/album4.jpg'),
+                image: Assets.album4.image().image,
                 itemModelAlbumView: itemModelAlbumView,
               ),
               const SizedBox(
@@ -57,7 +58,7 @@ class RecentlyPlayedCard extends StatelessWidget {
               ),
               AlbumCard(
                 label: S.of(context).gaming_mode,
-                image: const AssetImage('assets/album5.jpg'),
+                image: Assets.album5.image().image,
                 itemModelAlbumView: itemModelAlbumView,
               ),
             ],

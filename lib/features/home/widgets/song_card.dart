@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SongCard extends StatelessWidget {
-  final AssetImage image;
+  final ImageProvider image;
   const SongCard({
     super.key,
     required this.image,

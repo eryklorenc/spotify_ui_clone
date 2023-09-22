@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/features/home/widgets/good_album_card.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class GoodEvening extends StatelessWidget {
@@ -25,14 +26,14 @@ class GoodEvening extends StatelessWidget {
             children: [
               GoodAlbumCard(
                 label: S.of(context).top_global,
-                image: const AssetImage('assets/top50.jpg'),
+                image: Assets.top50.image().image,
               ),
               const SizedBox(
                 width: 14,
               ),
               GoodAlbumCard(
                 label: S.of(context).pop_remix,
-                image: const AssetImage('assets/album6.jpg'),
+                image: Assets.album6.image().image,
               ),
             ],
           ),
@@ -43,14 +44,14 @@ class GoodEvening extends StatelessWidget {
             children: [
               GoodAlbumCard(
                 label: S.of(context).top_usa,
-                image: const AssetImage('assets/album13.jpg'),
+                image: Assets.album13.image().image,
               ),
               const SizedBox(
                 width: 14,
               ),
               GoodAlbumCard(
                 label: S.of(context).workout,
-                image: const AssetImage('assets/album12.jpg'),
+                image: Assets.album12.image().image,
               ),
             ],
           ),
@@ -61,14 +62,14 @@ class GoodEvening extends StatelessWidget {
             children: [
               GoodAlbumCard(
                 label: S.of(context).best_of_nf,
-                image: const AssetImage('assets/album9.jpg'),
+                image: Assets.album9.image().image,
               ),
               const SizedBox(
                 width: 14,
               ),
               GoodAlbumCard(
                 label: S.of(context).beats_to_study,
-                image: const AssetImage('assets/album10.jpg'),
+                image: Assets.album10.image().image,
               ),
             ],
           ),

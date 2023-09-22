@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/features/home/widgets/song_card.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class RecommendedRadio extends StatelessWidget {
@@ -21,44 +22,44 @@ class RecommendedRadio extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
-        const SingleChildScrollView(
+        SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          physics: BouncingScrollPhysics(),
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             children: [
               SongCard(
-                image: AssetImage('assets/album13.jpg'),
+                image: Assets.album13.image().image,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
               SongCard(
-                image: AssetImage('assets/album3.jpg'),
+                image: Assets.album3.image().image,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
               SongCard(
-                image: AssetImage('assets/album2.jpg'),
+                image: Assets.album2.image().image,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
               SongCard(
-                image: AssetImage('assets/album10.jpg'),
+                image: Assets.album10.image().image,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
               SongCard(
-                image: AssetImage('assets/album9.jpg'),
+                image: Assets.album9.image().image,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
               SongCard(
-                image: AssetImage('assets/album6.jpg'),
+                image: Assets.album6.image().image,
               ),
             ],
           ),

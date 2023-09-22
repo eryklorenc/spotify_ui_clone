@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/app/widgets/auth_text_field.dart';
 import 'package:spotify_ui_clone/app/widgets/components/account_button.dart';
 import 'package:spotify_ui_clone/app/widgets/components/auth_button.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class LoginPage extends StatefulWidget {
@@ -69,25 +71,19 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                           SizedBox(
                             height: 70,
-                            child: Image.asset('assets/logo3.png'),
+                            child: Assets.logo3.image(),
                           ),
                           const SizedBox(
                             height: 70,
                           ),
                           Text(
                             S.of(context).millions_of_songs,
-                            style: const TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w500,
-                            ),
+                            style: Theme.of(context).xTextTheme.message1,
                             textAlign: TextAlign.center,
                           ),
                           Text(
                             S.of(context).free_on_spotify,
-                            style: const TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w500,
-                            ),
+                            style: Theme.of(context).xTextTheme.message1,
                             textAlign: TextAlign.center,
                           ),
                           const SizedBox(

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 
 class GoodAlbumCard extends StatelessWidget {
-  final AssetImage image;
+  final ImageProvider image;
   final String label;
+
   const GoodAlbumCard({
     super.key,
     required this.image,

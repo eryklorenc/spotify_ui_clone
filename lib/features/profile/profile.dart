@@ -7,6 +7,7 @@ import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/edit_profile_content.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class ProfileView extends StatefulWidget {
@@ -15,6 +16,10 @@ class ProfileView extends StatefulWidget {
   @override
   State<ProfileView> createState() => _ProfileViewState();
 }
+
+SizedBox customSizedBox = const SizedBox(
+  height: 10,
+);
 
 class _ProfileViewState extends State<ProfileView> {
   @override
@@ -54,9 +59,9 @@ class _ProfileViewState extends State<ProfileView> {
               child: SafeArea(
                 child: Column(
                   children: [
-                    const Center(
+                    Center(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/user.jpg'),
+                        backgroundImage: Assets.user.image().image,
                         radius: 70,
                       ),
                     ),
@@ -72,9 +77,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 S.of(context).numberfive,
                                 style: Theme.of(context).xTextTheme.h0,
                               ),
-                              const SizedBox(
-                                height: 10,
-                              ),
+                              customSizedBox,
                               Text(
                                 S.of(context).music,
                                 style: Theme.of(context).xTextTheme.h1,
@@ -89,9 +92,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 S.of(context).numberfiveone,
                                 style: Theme.of(context).xTextTheme.h0,
                               ),
-                              const SizedBox(
-                                height: 10,
-                              ),
+                              customSizedBox,
                               Text(
                                 S.of(context).followers,
                                 style: Theme.of(context).xTextTheme.h1,
@@ -106,9 +107,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 S.of(context).numbertwo,
                                 style: Theme.of(context).xTextTheme.h0,
                               ),
-                              const SizedBox(
-                                height: 10,
-                              ),
+                              customSizedBox,
                               Text(
                                 S.of(context).follow,
                                 style: Theme.of(context).xTextTheme.h1,

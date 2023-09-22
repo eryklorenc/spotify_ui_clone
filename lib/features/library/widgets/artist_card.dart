@@ -3,7 +3,7 @@ import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class ArtistCard extends StatelessWidget {
-  final AssetImage image;
+  final ImageProvider image;
   final String artist;
   const ArtistCard({
     super.key,

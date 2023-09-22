@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/features/library/widgets/artist_card.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class LibraryView extends StatefulWidget {
@@ -81,28 +82,28 @@ class _LibraryViewState extends State<LibraryView> {
                     children: [
                       ArtistCard(
                         artist: S.of(context).drake,
-                        image: const AssetImage('assets/album1.jpg'),
+                        image: Assets.album1.image().image,
                       ),
                       const SizedBox(
                         height: 35,
                       ),
                       ArtistCard(
                         artist: S.of(context).travis_scott,
-                        image: const AssetImage('assets/album7.jpg'),
+                        image: Assets.album7.image().image,
                       ),
                       const SizedBox(
                         height: 35,
                       ),
                       ArtistCard(
                         artist: S.of(context).nf,
-                        image: const AssetImage('assets/album4.jpg'),
+                        image: Assets.album4.image().image,
                       ),
                       const SizedBox(
                         height: 35,
                       ),
                       ArtistCard(
                         artist: S.of(context).eminem,
-                        image: const AssetImage('assets/album10.jpg'),
+                        image: Assets.album10.image().image,
                       ),
                     ],
                   ),

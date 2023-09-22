@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
+import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 import 'package:spotify_ui_clone/models/item_model_album_view.dart';
 
@@ -93,10 +94,8 @@ class AlbumView extends StatelessWidget {
                                       ),
                                       Row(
                                         children: [
-                                          const Image(
-                                            image: AssetImage(
-                                              'assets/logo.png',
-                                            ),
+                                          Image(
+                                            image: Assets.logo.image().image,
                                             width: 52,
                                             height: 52,
                                           ),
