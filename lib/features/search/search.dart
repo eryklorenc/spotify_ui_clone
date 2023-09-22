@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
-import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
+import 'package:spotify_ui_clone/features/search/widgets/search_card.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
 class SearchView extends StatefulWidget {
@@ -53,71 +53,29 @@ class _SearchViewState extends State<SearchView> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    color: AppColors.deepPurple,
-                    child: Text(
-                      S.of(context).pop_music,
-                      style: Theme.of(context).xTextTheme.body7,
-                    ),
-                  ),
+                SearchCard(
+                  text: S.of(context).pop_music,
+                  color: AppColors.deepPurple,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    color: AppColors.deepOrangeAccent,
-                    child: Text(
-                      S.of(context).rock,
-                      style: Theme.of(context).xTextTheme.body7,
-                    ),
-                  ),
+                SearchCard(
+                  color: AppColors.deepOrangeAccent,
+                  text: S.of(context).rock,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    color: AppColors.deepPurpleAccent,
-                    child: Text(
-                      S.of(context).rap,
-                      style: Theme.of(context).xTextTheme.body7,
-                    ),
-                  ),
+                SearchCard(
+                  color: AppColors.deepPurpleAccent,
+                  text: S.of(context).rap,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    color: AppColors.blueAccent,
-                    child: Text(
-                      S.of(context).jazz,
-                      style: Theme.of(context).xTextTheme.body7,
-                    ),
-                  ),
+                SearchCard(
+                  color: AppColors.blueAccent,
+                  text: S.of(context).jazz,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    color: AppColors.green,
-                    child: Text(
-                      S.of(context).reggae,
-                      style: Theme.of(context).xTextTheme.body7,
-                    ),
-                  ),
+                SearchCard(
+                  color: AppColors.green,
+                  text: S.of(context).reggae,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    color: AppColors.deepOrange,
-                    child: Text(
-                      S.of(context).house,
-                      style: Theme.of(context).xTextTheme.body7,
-                    ),
-                  ),
+                SearchCard(
+                  color: AppColors.deepOrange,
+                  text: S.of(context).house,
                 ),
               ],
             ),
