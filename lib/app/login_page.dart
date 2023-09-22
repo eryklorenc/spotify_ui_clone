@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
 import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/app/widgets/auth_text_field.dart';
 import 'package:spotify_ui_clone/app/widgets/components/account_button.dart';
 import 'package:spotify_ui_clone/app/widgets/components/auth_button.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
-import 'package:spotify_ui_clone/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({
@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthCubit(LoginRepository()),
+      create: (context) => getIt<AuthCubit>(),
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(

@@ -28,7 +28,7 @@ import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart'
 import 'package:spotify_ui_clone/repositories/login_repository.dart' as _i3;
 
 extension GetItInjectableX on _i1.GetIt {
-  // initializes the registration of main-scope dependencies inside of GetIt
+// initializes the registration of main-scope dependencies inside of GetIt
   _i1.GetIt init({
     String? environment,
     _i2.EnvironmentFilter? environmentFilter,
