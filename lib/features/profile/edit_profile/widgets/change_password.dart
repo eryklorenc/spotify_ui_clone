@@ -4,7 +4,7 @@ import 'package:spotify_ui_clone/app/core/config/enums.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
-import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
+import 'package:spotify_ui_clone/features/auth/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/components/save_button.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/custom_app_bar.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/profile_text_field.dart';

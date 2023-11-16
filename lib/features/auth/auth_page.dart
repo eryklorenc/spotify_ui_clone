@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
-import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
-import 'package:spotify_ui_clone/app/login_page.dart';
+import 'package:spotify_ui_clone/features/auth/cubit/auth_cubit.dart';
+import 'package:spotify_ui_clone/features/auth/login_page.dart';
 import 'package:spotify_ui_clone/navigations/tabbar.dart';
 
 class RootPage extends StatelessWidget {

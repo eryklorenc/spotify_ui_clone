@@ -4,7 +4,7 @@ import 'package:spotify_ui_clone/app/core/config/enums.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
-import 'package:spotify_ui_clone/app/cubit/auth_cubit.dart';
+import 'package:spotify_ui_clone/features/auth/cubit/auth_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/edit_profile_content.dart';
 import 'package:spotify_ui_clone/gen/assets.gen.dart';
@@ -156,7 +156,7 @@ class _ProfileViewState extends State<ProfileView> {
                                       );
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      fixedSize: const Size(140, 50),
+                                      fixedSize: const Size(160, 50),
                                       backgroundColor: AppColors.green,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
@@ -179,7 +179,7 @@ class _ProfileViewState extends State<ProfileView> {
                         context.read<AuthCubit>().signOut();
                       },
                       style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(140, 50),
+                        fixedSize: const Size(160, 50),
                         backgroundColor: AppColors.green,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(200),

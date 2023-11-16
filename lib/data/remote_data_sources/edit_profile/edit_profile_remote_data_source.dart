@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
+import 'package:spotify_ui_clone/domain/models/edit_profile/item_model_edit_profile.dart';
 
 part 'edit_profile_remote_data_source.g.dart';
 

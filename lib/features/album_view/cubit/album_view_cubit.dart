@@ -2,8 +2,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:spotify_ui_clone/app/core/config/enums.dart';
-import 'package:spotify_ui_clone/models/item_model_album_view.dart';
-import 'package:spotify_ui_clone/repositories/items_repository_album_view.dart';
+import 'package:spotify_ui_clone/domain/models/album_view/item_model_album_view.dart';
+import 'package:spotify_ui_clone/domain/repositories/items/items_repository.dart';
 
 part 'album_view_state.dart';
 

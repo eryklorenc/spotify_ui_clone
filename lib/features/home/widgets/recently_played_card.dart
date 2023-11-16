@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/domain/models/album_view/item_model_album_view.dart';
 import 'package:spotify_ui_clone/features/album_view/cubit/album_view_cubit.dart';
 import 'package:spotify_ui_clone/gen/assets.gen.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
-import 'package:spotify_ui_clone/models/item_model_album_view.dart';
 import 'package:spotify_ui_clone/features/home/widgets/album_card.dart';
 
 class RecentlyPlayedCard extends StatelessWidget {

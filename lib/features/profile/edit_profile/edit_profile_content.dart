@@ -3,13 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/app/core/utils/injection_container.dart';
+import 'package:spotify_ui_clone/domain/models/edit_profile/item_model_edit_profile.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/cubit/edit_profile_cubit.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/change_email.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/change_password.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/custom_app_bar.dart';
 import 'package:spotify_ui_clone/features/profile/edit_profile/widgets/settings_content.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
-import 'package:spotify_ui_clone/models/item_model_edit_profile.dart';
 
 class EditProfileContent extends StatelessWidget {
   const EditProfileContent({

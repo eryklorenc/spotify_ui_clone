@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/app/auth_page.dart';
+import 'package:spotify_ui_clone/features/auth/auth_page.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
 import 'package:spotify_ui_clone/app/core/theme/app_text_theme_extension.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
