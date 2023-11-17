@@ -172,6 +172,7 @@ class AlbumView extends StatelessWidget {
                         icon: const Icon(
                           Icons.keyboard_arrow_left,
                           size: 40,
+                          color: AppColors.white,
                         ),
                       ),
                       const Spacer(),

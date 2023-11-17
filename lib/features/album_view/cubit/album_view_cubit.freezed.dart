@@ -83,11 +83,11 @@ class _$AlbumViewStateCopyWithImpl<$Res, $Val extends AlbumViewState>
 }
 
 /// @nodoc
-abstract class _$$_AlbumViewStateCopyWith<$Res>
+abstract class _$$AlbumViewStateImplCopyWith<$Res>
     implements $AlbumViewStateCopyWith<$Res> {
-  factory _$$_AlbumViewStateCopyWith(
-          _$_AlbumViewState value, $Res Function(_$_AlbumViewState) then) =
-      __$$_AlbumViewStateCopyWithImpl<$Res>;
+  factory _$$AlbumViewStateImplCopyWith(_$AlbumViewStateImpl value,
+          $Res Function(_$AlbumViewStateImpl) then) =
+      __$$AlbumViewStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ItemModelAlbumView? model, Status status, String? errorMessage});
@@ -97,11 +97,11 @@ abstract class _$$_AlbumViewStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AlbumViewStateCopyWithImpl<$Res>
-    extends _$AlbumViewStateCopyWithImpl<$Res, _$_AlbumViewState>
-    implements _$$_AlbumViewStateCopyWith<$Res> {
-  __$$_AlbumViewStateCopyWithImpl(
-      _$_AlbumViewState _value, $Res Function(_$_AlbumViewState) _then)
+class __$$AlbumViewStateImplCopyWithImpl<$Res>
+    extends _$AlbumViewStateCopyWithImpl<$Res, _$AlbumViewStateImpl>
+    implements _$$AlbumViewStateImplCopyWith<$Res> {
+  __$$AlbumViewStateImplCopyWithImpl(
+      _$AlbumViewStateImpl _value, $Res Function(_$AlbumViewStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +111,7 @@ class __$$_AlbumViewStateCopyWithImpl<$Res>
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_AlbumViewState(
+    return _then(_$AlbumViewStateImpl(
       model: freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -130,8 +130,8 @@ class __$$_AlbumViewStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AlbumViewState implements _AlbumViewState {
-  const _$_AlbumViewState(
+class _$AlbumViewStateImpl implements _AlbumViewState {
+  const _$AlbumViewStateImpl(
       {this.model, this.status = Status.initial, this.errorMessage});
 
   @override
@@ -151,7 +151,7 @@ class _$_AlbumViewState implements _AlbumViewState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AlbumViewState &&
+            other is _$AlbumViewStateImpl &&
             (identical(other.model, model) || other.model == model) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -164,15 +164,16 @@ class _$_AlbumViewState implements _AlbumViewState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AlbumViewStateCopyWith<_$_AlbumViewState> get copyWith =>
-      __$$_AlbumViewStateCopyWithImpl<_$_AlbumViewState>(this, _$identity);
+  _$$AlbumViewStateImplCopyWith<_$AlbumViewStateImpl> get copyWith =>
+      __$$AlbumViewStateImplCopyWithImpl<_$AlbumViewStateImpl>(
+          this, _$identity);
 }
 
 abstract class _AlbumViewState implements AlbumViewState {
   const factory _AlbumViewState(
       {final ItemModelAlbumView? model,
       final Status status,
-      final String? errorMessage}) = _$_AlbumViewState;
+      final String? errorMessage}) = _$AlbumViewStateImpl;
 
   @override
   ItemModelAlbumView? get model;
@@ -182,6 +183,6 @@ abstract class _AlbumViewState implements AlbumViewState {
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$_AlbumViewStateCopyWith<_$_AlbumViewState> get copyWith =>
+  _$$AlbumViewStateImplCopyWith<_$AlbumViewStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

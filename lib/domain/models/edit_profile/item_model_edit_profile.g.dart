@@ -6,14 +6,14 @@ part of 'item_model_edit_profile.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ItemModelEditProfile _$$_ItemModelEditProfileFromJson(
+_$ItemModelEditProfileImpl _$$ItemModelEditProfileImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ItemModelEditProfile(
+    _$ItemModelEditProfileImpl(
       json['body'] as String,
     );
 
-Map<String, dynamic> _$$_ItemModelEditProfileToJson(
-        _$_ItemModelEditProfile instance) =>
+Map<String, dynamic> _$$ItemModelEditProfileImplToJson(
+        _$ItemModelEditProfileImpl instance) =>
     <String, dynamic>{
       'body': instance.content,
     };

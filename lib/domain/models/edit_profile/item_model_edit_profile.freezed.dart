@@ -64,22 +64,22 @@ class _$ItemModelEditProfileCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ItemModelEditProfileCopyWith<$Res>
+abstract class _$$ItemModelEditProfileImplCopyWith<$Res>
     implements $ItemModelEditProfileCopyWith<$Res> {
-  factory _$$_ItemModelEditProfileCopyWith(_$_ItemModelEditProfile value,
-          $Res Function(_$_ItemModelEditProfile) then) =
-      __$$_ItemModelEditProfileCopyWithImpl<$Res>;
+  factory _$$ItemModelEditProfileImplCopyWith(_$ItemModelEditProfileImpl value,
+          $Res Function(_$ItemModelEditProfileImpl) then) =
+      __$$ItemModelEditProfileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'body') String content});
 }
 
 /// @nodoc
-class __$$_ItemModelEditProfileCopyWithImpl<$Res>
-    extends _$ItemModelEditProfileCopyWithImpl<$Res, _$_ItemModelEditProfile>
-    implements _$$_ItemModelEditProfileCopyWith<$Res> {
-  __$$_ItemModelEditProfileCopyWithImpl(_$_ItemModelEditProfile _value,
-      $Res Function(_$_ItemModelEditProfile) _then)
+class __$$ItemModelEditProfileImplCopyWithImpl<$Res>
+    extends _$ItemModelEditProfileCopyWithImpl<$Res, _$ItemModelEditProfileImpl>
+    implements _$$ItemModelEditProfileImplCopyWith<$Res> {
+  __$$ItemModelEditProfileImplCopyWithImpl(_$ItemModelEditProfileImpl _value,
+      $Res Function(_$ItemModelEditProfileImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_ItemModelEditProfileCopyWithImpl<$Res>
   $Res call({
     Object? content = null,
   }) {
-    return _then(_$_ItemModelEditProfile(
+    return _then(_$ItemModelEditProfileImpl(
       null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_ItemModelEditProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ItemModelEditProfile implements _ItemModelEditProfile {
-  _$_ItemModelEditProfile(@JsonKey(name: 'body') this.content);
+class _$ItemModelEditProfileImpl implements _ItemModelEditProfile {
+  _$ItemModelEditProfileImpl(@JsonKey(name: 'body') this.content);
 
-  factory _$_ItemModelEditProfile.fromJson(Map<String, dynamic> json) =>
-      _$$_ItemModelEditProfileFromJson(json);
+  factory _$ItemModelEditProfileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ItemModelEditProfileImplFromJson(json);
 
   @override
   @JsonKey(name: 'body')
@@ -117,7 +117,7 @@ class _$_ItemModelEditProfile implements _ItemModelEditProfile {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ItemModelEditProfile &&
+            other is _$ItemModelEditProfileImpl &&
             (identical(other.content, content) || other.content == content));
   }
 
@@ -128,13 +128,14 @@ class _$_ItemModelEditProfile implements _ItemModelEditProfile {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ItemModelEditProfileCopyWith<_$_ItemModelEditProfile> get copyWith =>
-      __$$_ItemModelEditProfileCopyWithImpl<_$_ItemModelEditProfile>(
-          this, _$identity);
+  _$$ItemModelEditProfileImplCopyWith<_$ItemModelEditProfileImpl>
+      get copyWith =>
+          __$$ItemModelEditProfileImplCopyWithImpl<_$ItemModelEditProfileImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ItemModelEditProfileToJson(
+    return _$$ItemModelEditProfileImplToJson(
       this,
     );
   }
@@ -142,16 +143,16 @@ class _$_ItemModelEditProfile implements _ItemModelEditProfile {
 
 abstract class _ItemModelEditProfile implements ItemModelEditProfile {
   factory _ItemModelEditProfile(@JsonKey(name: 'body') final String content) =
-      _$_ItemModelEditProfile;
+      _$ItemModelEditProfileImpl;
 
   factory _ItemModelEditProfile.fromJson(Map<String, dynamic> json) =
-      _$_ItemModelEditProfile.fromJson;
+      _$ItemModelEditProfileImpl.fromJson;
 
   @override
   @JsonKey(name: 'body')
   String get content;
   @override
   @JsonKey(ignore: true)
-  _$$_ItemModelEditProfileCopyWith<_$_ItemModelEditProfile> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ItemModelEditProfileImplCopyWith<_$ItemModelEditProfileImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

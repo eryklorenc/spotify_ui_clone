@@ -83,11 +83,11 @@ class _$EditProfileStateCopyWithImpl<$Res, $Val extends EditProfileState>
 }
 
 /// @nodoc
-abstract class _$$_EditProfileStateCopyWith<$Res>
+abstract class _$$EditProfileStateImplCopyWith<$Res>
     implements $EditProfileStateCopyWith<$Res> {
-  factory _$$_EditProfileStateCopyWith(
-          _$_EditProfileState value, $Res Function(_$_EditProfileState) then) =
-      __$$_EditProfileStateCopyWithImpl<$Res>;
+  factory _$$EditProfileStateImplCopyWith(_$EditProfileStateImpl value,
+          $Res Function(_$EditProfileStateImpl) then) =
+      __$$EditProfileStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ItemModelEditProfile? model, Status status, String? errorMessage});
@@ -97,11 +97,11 @@ abstract class _$$_EditProfileStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EditProfileStateCopyWithImpl<$Res>
-    extends _$EditProfileStateCopyWithImpl<$Res, _$_EditProfileState>
-    implements _$$_EditProfileStateCopyWith<$Res> {
-  __$$_EditProfileStateCopyWithImpl(
-      _$_EditProfileState _value, $Res Function(_$_EditProfileState) _then)
+class __$$EditProfileStateImplCopyWithImpl<$Res>
+    extends _$EditProfileStateCopyWithImpl<$Res, _$EditProfileStateImpl>
+    implements _$$EditProfileStateImplCopyWith<$Res> {
+  __$$EditProfileStateImplCopyWithImpl(_$EditProfileStateImpl _value,
+      $Res Function(_$EditProfileStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +111,7 @@ class __$$_EditProfileStateCopyWithImpl<$Res>
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_EditProfileState(
+    return _then(_$EditProfileStateImpl(
       model: freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -130,8 +130,8 @@ class __$$_EditProfileStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_EditProfileState implements _EditProfileState {
-  const _$_EditProfileState(
+class _$EditProfileStateImpl implements _EditProfileState {
+  const _$EditProfileStateImpl(
       {this.model, this.status = Status.initial, this.errorMessage});
 
   @override
@@ -151,7 +151,7 @@ class _$_EditProfileState implements _EditProfileState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EditProfileState &&
+            other is _$EditProfileStateImpl &&
             (identical(other.model, model) || other.model == model) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -164,15 +164,16 @@ class _$_EditProfileState implements _EditProfileState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EditProfileStateCopyWith<_$_EditProfileState> get copyWith =>
-      __$$_EditProfileStateCopyWithImpl<_$_EditProfileState>(this, _$identity);
+  _$$EditProfileStateImplCopyWith<_$EditProfileStateImpl> get copyWith =>
+      __$$EditProfileStateImplCopyWithImpl<_$EditProfileStateImpl>(
+          this, _$identity);
 }
 
 abstract class _EditProfileState implements EditProfileState {
   const factory _EditProfileState(
       {final ItemModelEditProfile? model,
       final Status status,
-      final String? errorMessage}) = _$_EditProfileState;
+      final String? errorMessage}) = _$EditProfileStateImpl;
 
   @override
   ItemModelEditProfile? get model;
@@ -182,6 +183,6 @@ abstract class _EditProfileState implements EditProfileState {
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$_EditProfileStateCopyWith<_$_EditProfileState> get copyWith =>
+  _$$EditProfileStateImplCopyWith<_$EditProfileStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

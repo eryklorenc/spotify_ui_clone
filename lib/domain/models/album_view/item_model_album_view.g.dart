@@ -6,14 +6,14 @@ part of 'item_model_album_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ItemModelAlbumView _$$_ItemModelAlbumViewFromJson(
+_$ItemModelAlbumViewImpl _$$ItemModelAlbumViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ItemModelAlbumView(
+    _$ItemModelAlbumViewImpl(
       json['body'] as String,
     );
 
-Map<String, dynamic> _$$_ItemModelAlbumViewToJson(
-        _$_ItemModelAlbumView instance) =>
+Map<String, dynamic> _$$ItemModelAlbumViewImplToJson(
+        _$ItemModelAlbumViewImpl instance) =>
     <String, dynamic>{
       'body': instance.content,
     };

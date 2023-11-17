@@ -1,86 +1,72 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_ui_clone/app/core/theme/app_colors.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify_ui_clone/features/search/cubit/search_cubit.dart';
 import 'package:spotify_ui_clone/features/search/widgets/search_card.dart';
+import 'package:spotify_ui_clone/features/search/widgets/search_field.dart';
 import 'package:spotify_ui_clone/generated/l10n.dart';
 
-class SearchView extends StatefulWidget {
+class SearchView extends StatelessWidget {
   const SearchView({super.key});
 
   @override
-  State<SearchView> createState() => _SearchViewState();
-}
-
-class _SearchViewState extends State<SearchView> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 50,
-          ),
-          Center(
-            child: Text(
-              S.of(context).search,
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: TextField(
-              decoration: InputDecoration(
-                fillColor: AppColors.white,
-                prefixIcon: const Icon(
-                  Icons.search,
-                  color: AppColors.dark,
-                  size: 28,
-                ),
-                filled: true,
-                border: InputBorder.none,
-                hintText: S.of(context).find_your_music,
-                hintStyle: const TextStyle(
-                  color: AppColors.grey,
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: GridView.count(
-              primary: false,
-              padding: const EdgeInsets.all(12),
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
+      body: BlocProvider(
+        create: (context) => SearchCubit(),
+        child: BlocBuilder<SearchCubit, SearchState>(
+          builder: (context, state) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SearchCard(
-                  text: S.of(context).pop_music,
-                  color: AppColors.deepPurple,
+                const SizedBox(
+                  height: 50,
                 ),
-                SearchCard(
-                  color: AppColors.deepOrangeAccent,
-                  text: S.of(context).rock,
+                Center(
+                  child: Text(
+                    S.of(context).search,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
                 ),
-                SearchCard(
-                  color: AppColors.deepPurpleAccent,
-                  text: S.of(context).rap,
+                Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: SearchField(
+                    onChanged: (text) {
+                      context.read<SearchCubit>().onSearchTextChanged(text);
+                    },
+                  ),
                 ),
-                SearchCard(
-                  color: AppColors.blueAccent,
-                  text: S.of(context).jazz,
-                ),
-                SearchCard(
-                  color: AppColors.green,
-                  text: S.of(context).reggae,
-                ),
-                SearchCard(
-                  color: AppColors.deepOrange,
-                  text: S.of(context).house,
+                Expanded(
+                  child: BlocBuilder<SearchCubit, SearchState>(
+                    builder: (context, state) {
+                      final allGenres = state.allGenres;
+                      final searchResults = state.searchResults.isNotEmpty
+                          ? state.searchResults
+                          : allGenres;
+
+                      return GridView.count(
+                        primary: false,
+                        padding: const EdgeInsets.all(12),
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        children: searchResults
+                            .map(
+                              (genre) => SearchCard(
+                                text: genre,
+                                color: context
+                                    .read<SearchCubit>()
+                                    .getGenreColor(genre),
+                              ),
+                            )
+                            .toList(),
+                      );
+                    },
+                  ),
                 ),
               ],
-            ),
-          ),
-        ],
+            );
+          },
+        ),
       ),
     );
   }

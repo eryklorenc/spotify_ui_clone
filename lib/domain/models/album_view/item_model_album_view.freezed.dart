@@ -63,22 +63,22 @@ class _$ItemModelAlbumViewCopyWithImpl<$Res, $Val extends ItemModelAlbumView>
 }
 
 /// @nodoc
-abstract class _$$_ItemModelAlbumViewCopyWith<$Res>
+abstract class _$$ItemModelAlbumViewImplCopyWith<$Res>
     implements $ItemModelAlbumViewCopyWith<$Res> {
-  factory _$$_ItemModelAlbumViewCopyWith(_$_ItemModelAlbumView value,
-          $Res Function(_$_ItemModelAlbumView) then) =
-      __$$_ItemModelAlbumViewCopyWithImpl<$Res>;
+  factory _$$ItemModelAlbumViewImplCopyWith(_$ItemModelAlbumViewImpl value,
+          $Res Function(_$ItemModelAlbumViewImpl) then) =
+      __$$ItemModelAlbumViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'body') String content});
 }
 
 /// @nodoc
-class __$$_ItemModelAlbumViewCopyWithImpl<$Res>
-    extends _$ItemModelAlbumViewCopyWithImpl<$Res, _$_ItemModelAlbumView>
-    implements _$$_ItemModelAlbumViewCopyWith<$Res> {
-  __$$_ItemModelAlbumViewCopyWithImpl(
-      _$_ItemModelAlbumView _value, $Res Function(_$_ItemModelAlbumView) _then)
+class __$$ItemModelAlbumViewImplCopyWithImpl<$Res>
+    extends _$ItemModelAlbumViewCopyWithImpl<$Res, _$ItemModelAlbumViewImpl>
+    implements _$$ItemModelAlbumViewImplCopyWith<$Res> {
+  __$$ItemModelAlbumViewImplCopyWithImpl(_$ItemModelAlbumViewImpl _value,
+      $Res Function(_$ItemModelAlbumViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +86,7 @@ class __$$_ItemModelAlbumViewCopyWithImpl<$Res>
   $Res call({
     Object? content = null,
   }) {
-    return _then(_$_ItemModelAlbumView(
+    return _then(_$ItemModelAlbumViewImpl(
       null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -97,11 +97,11 @@ class __$$_ItemModelAlbumViewCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ItemModelAlbumView implements _ItemModelAlbumView {
-  _$_ItemModelAlbumView(@JsonKey(name: 'body') this.content);
+class _$ItemModelAlbumViewImpl implements _ItemModelAlbumView {
+  _$ItemModelAlbumViewImpl(@JsonKey(name: 'body') this.content);
 
-  factory _$_ItemModelAlbumView.fromJson(Map<String, dynamic> json) =>
-      _$$_ItemModelAlbumViewFromJson(json);
+  factory _$ItemModelAlbumViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ItemModelAlbumViewImplFromJson(json);
 
   @override
   @JsonKey(name: 'body')
@@ -116,7 +116,7 @@ class _$_ItemModelAlbumView implements _ItemModelAlbumView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ItemModelAlbumView &&
+            other is _$ItemModelAlbumViewImpl &&
             (identical(other.content, content) || other.content == content));
   }
 
@@ -127,13 +127,13 @@ class _$_ItemModelAlbumView implements _ItemModelAlbumView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ItemModelAlbumViewCopyWith<_$_ItemModelAlbumView> get copyWith =>
-      __$$_ItemModelAlbumViewCopyWithImpl<_$_ItemModelAlbumView>(
+  _$$ItemModelAlbumViewImplCopyWith<_$ItemModelAlbumViewImpl> get copyWith =>
+      __$$ItemModelAlbumViewImplCopyWithImpl<_$ItemModelAlbumViewImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ItemModelAlbumViewToJson(
+    return _$$ItemModelAlbumViewImplToJson(
       this,
     );
   }
@@ -141,16 +141,16 @@ class _$_ItemModelAlbumView implements _ItemModelAlbumView {
 
 abstract class _ItemModelAlbumView implements ItemModelAlbumView {
   factory _ItemModelAlbumView(@JsonKey(name: 'body') final String content) =
-      _$_ItemModelAlbumView;
+      _$ItemModelAlbumViewImpl;
 
   factory _ItemModelAlbumView.fromJson(Map<String, dynamic> json) =
-      _$_ItemModelAlbumView.fromJson;
+      _$ItemModelAlbumViewImpl.fromJson;
 
   @override
   @JsonKey(name: 'body')
   String get content;
   @override
   @JsonKey(ignore: true)
-  _$$_ItemModelAlbumViewCopyWith<_$_ItemModelAlbumView> get copyWith =>
+  _$$ItemModelAlbumViewImplCopyWith<_$ItemModelAlbumViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
