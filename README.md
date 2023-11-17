@@ -18,8 +18,8 @@
 ![Zrzut ekranu (77) (1)](https://github.com/eryklorenc/spotify_ui_clone/assets/119433777/0796cba5-008d-45f4-9e74-2e58028b9512)
 ![Zrzut ekranu (68)](https://user-images.githubusercontent.com/119433777/231615349-f0f385c1-268b-49fa-a8de-1382fd172d20.png)
 ![Zrzut ekranu (37)](https://user-images.githubusercontent.com/119433777/218543630-944de1ab-1c9e-4cc6-ab6b-0e1f242b76bd.png)
-
-
-
+![settings](https://github.com/eryklorenc/spotify_ui_clone/assets/119433777/81dfa696-0d86-417b-8f32-75d9147c2aca)
+![email](https://github.com/eryklorenc/spotify_ui_clone/assets/119433777/575fed97-3129-4eed-b585-477bf0e9b52e)
+![password](https://github.com/eryklorenc/spotify_ui_clone/assets/119433777/efed9a9c-77b0-47af-84e9-c5fa3b6476d2)
 
 
